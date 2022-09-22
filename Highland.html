@@ -1,0 +1,1101 @@
+
+<!DOCTYPE html>
+<html lang="en-US" class="no-js">
+
+<head> <script type="text/javascript">if(!gform){document.addEventListener("gform_main_scripts_loaded",function(){gform.scriptsLoaded=!0}),window.addEventListener("DOMContentLoaded",function(){gform.domLoaded=!0});var gform={domLoaded:!1,scriptsLoaded:!1,initializeOnLoaded:function(o){gform.domLoaded&&gform.scriptsLoaded?o():!gform.domLoaded&&gform.scriptsLoaded?window.addEventListener("DOMContentLoaded",o):document.addEventListener("gform_main_scripts_loaded",o)},hooks:{action:{},filter:{}},addAction:function(o,n,r,t){gform.addHook("action",o,n,r,t)},addFilter:function(o,n,r,t){gform.addHook("filter",o,n,r,t)},doAction:function(o){gform.doHook("action",o,arguments)},applyFilters:function(o){return gform.doHook("filter",o,arguments)},removeAction:function(o,n){gform.removeHook("action",o,n)},removeFilter:function(o,n,r){gform.removeHook("filter",o,n,r)},addHook:function(o,n,r,t,i){null==gform.hooks[o][n]&&(gform.hooks[o][n]=[]);var e=gform.hooks[o][n];null==i&&(i=n+"_"+e.length),null==t&&(t=10),gform.hooks[o][n].push({tag:i,callable:r,priority:t})},doHook:function(o,n,r){if(r=Array.prototype.slice.call(r,1),null!=gform.hooks[o][n]){var t,i=gform.hooks[o][n];i.sort(function(o,n){return o.priority-n.priority});for(var e=0;e<i.length;e++)"function"!=typeof(t=i[e].callable)&&(t=window[t]),"action"==o?t.apply(null,r):r[0]=t.apply(null,r)}if("filter"==o)return r[0]},removeHook:function(o,n,r,t){if(null!=gform.hooks[o][n])for(var i=gform.hooks[o][n],e=i.length-1;0<=e;e--)null!=t&&t!=i[e].tag||null!=r&&r!=i[e].priority||i.splice(e,1)}}}</script>
+   <meta charset="UTF-8"><script type="text/javascript">(window.NREUM||(NREUM={})).init={ajax:{deny_list:["bam.nr-data.net"]}};(window.NREUM||(NREUM={})).loader_config={licenseKey:"NRJS-238f1c6cd19561447a3",applicationID:"424093655"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var i=e[n]={exports:{}};t[n][0].call(i.exports,function(e){var i=t[n][1][e];return r(i||e)},i,i.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(t,e,n){function r(){}function i(t,e,n,r){return function(){return s.recordSupportability("API/"+e+"/called"),o(t+e,[u.now()].concat(c(arguments)),n?null:this,r),n?void 0:this}}var o=t("handle"),a=t(9),c=t(10),f=t("ee").get("tracer"),u=t("loader"),s=t(4),d=NREUM;"undefined"==typeof window.newrelic&&(newrelic=d);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",v=l+"ixn-";a(p,function(t,e){d[e]=i(l,e,!0,"api")}),d.addPageAction=i(l,"addPageAction",!0),d.setCurrentRouteName=i(l,"routeName",!0),e.exports=newrelic,d.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(t,e){var n={},r=this,i="function"==typeof e;return o(v+"tracer",[u.now(),t,n],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return e.apply(this,arguments)}catch(t){throw f.emit("fn-err",[arguments,this,t],n),t}finally{f.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){m[e]=i(v,e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),s.recordSupportability("API/noticeError/called"),o("err",[t,u.now(),!1,e])}},{}],2:[function(t,e,n){function r(t){if(NREUM.init){for(var e=NREUM.init,n=t.split("."),r=0;r<n.length-1;r++)if(e=e[n[r]],"object"!=typeof e)return;return e=e[n[n.length-1]]}}e.exports={getConfiguration:r}},{}],3:[function(t,e,n){var r=!1;try{var i=Object.defineProperty({},"passive",{get:function(){r=!0}});window.addEventListener("testPassive",null,i),window.removeEventListener("testPassive",null,i)}catch(o){}e.exports=function(t){return r?{passive:!0,capture:!!t}:!!t}},{}],4:[function(t,e,n){function r(t,e){var n=[a,t,{name:t},e];return o("storeMetric",n,null,"api"),n}function i(t,e){var n=[c,t,{name:t},e];return o("storeEventMetrics",n,null,"api"),n}var o=t("handle"),a="sm",c="cm";e.exports={constants:{SUPPORTABILITY_METRIC:a,CUSTOM_METRIC:c},recordSupportability:r,recordCustom:i}},{}],5:[function(t,e,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=t(11);e.exports=r,e.exports.offset=a,e.exports.getLastTimestamp=i},{}],6:[function(t,e,n){function r(t,e){var n=t.getEntries();n.forEach(function(t){"first-paint"===t.name?l("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&l("timing",["fcp",Math.floor(t.startTime)])})}function i(t,e){var n=t.getEntries();if(n.length>0){var r=n[n.length-1];if(u&&u<r.startTime)return;var i=[r],o=a({});o&&i.push(o),l("lcp",i)}}function o(t){t.getEntries().forEach(function(t){t.hadRecentInput||l("cls",[t])})}function a(t){var e=navigator.connection||navigator.mozConnection||navigator.webkitConnection;if(e)return e.type&&(t["net-type"]=e.type),e.effectiveType&&(t["net-etype"]=e.effectiveType),e.rtt&&(t["net-rtt"]=e.rtt),e.downlink&&(t["net-dlink"]=e.downlink),t}function c(t){if(t instanceof y&&!w){var e=Math.round(t.timeStamp),n={type:t.type};a(n),e<=v.now()?n.fid=v.now()-e:e>v.offset&&e<=Date.now()?(e-=v.offset,n.fid=v.now()-e):e=v.now(),w=!0,l("timing",["fi",e,n])}}function f(t){"hidden"===t&&(u=v.now(),l("pageHide",[u]))}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var u,s,d,p,l=t("handle"),v=t("loader"),m=t(8),g=t(3),y=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){s=new PerformanceObserver(r);try{s.observe({entryTypes:["paint"]})}catch(h){}d=new PerformanceObserver(i);try{d.observe({entryTypes:["largest-contentful-paint"]})}catch(h){}p=new PerformanceObserver(o);try{p.observe({type:"layout-shift",buffered:!0})}catch(h){}}if("addEventListener"in document){var w=!1,b=["click","keydown","mousedown","pointerdown","touchstart"];b.forEach(function(t){document.addEventListener(t,c,g(!1))})}m(f)}},{}],7:[function(t,e,n){function r(t,e){if(!i)return!1;if(t!==i)return!1;if(!e)return!0;if(!o)return!1;for(var n=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}e.exports={agent:i,version:o,match:r}},{}],8:[function(t,e,n){function r(t){function e(){t(c&&document[c]?document[c]:document[o]?"hidden":"visible")}"addEventListener"in document&&a&&document.addEventListener(a,e,i(!1))}var i=t(3);e.exports=r;var o,a,c;"undefined"!=typeof document.hidden?(o="hidden",a="visibilitychange",c="visibilityState"):"undefined"!=typeof document.msHidden?(o="msHidden",a="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(o="webkitHidden",a="webkitvisibilitychange",c="webkitVisibilityState")},{}],9:[function(t,e,n){function r(t,e){var n=[],r="",o=0;for(r in t)i.call(t,r)&&(n[o]=e(r,t[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],10:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,i=n-e||0,o=Array(i<0?0:i);++r<i;)o[r]=t[e+r];return o}e.exports=r},{}],11:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,e,n){function r(){}function i(t){function e(t){return t&&t instanceof r?t:t?u(t,f,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!l.aborted||o){t&&a&&t(n,r,i);for(var c=e(i),f=m(n),u=f.length,s=0;s<u;s++)f[s].apply(c,r);var p=d[w[n]];return p&&p.push([b,n,r,c]),c}}function o(t,e){h[t]=m(t).concat(e)}function v(t,e){var n=h[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function m(t){return h[t]||[]}function g(t){return p[t]=p[t]||i(n)}function y(t,e){l.aborted||s(t,function(t,n){e=e||"feature",w[n]=e,e in d||(d[e]=[])})}var h={},w={},b={on:o,addEventListener:o,removeEventListener:v,emit:n,get:g,listeners:m,context:e,buffer:y,abort:c,aborted:!1};return b}function o(t){return u(t,f,a)}function a(){return new r}function c(){(d.api||d.feature)&&(l.aborted=!0,d=l.backlog={})}var f="nr@context",u=t("gos"),s=t(9),d={},p={},l=e.exports=i();e.exports.getOrSetContext=o,l.backlog=d},{}],gos:[function(t,e,n){function r(t,e,n){if(i.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return t[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){i.buffer([t],r),i.emit(t,e,n)}var i=t("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,o,function(){return i++})}var i=1,o="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!M++){var t=T.info=NREUM.info,e=m.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return u.abort();f(x,function(e,n){t[e]||(t[e]=n)});var n=a();c("mark",["onload",n+T.offset],null,"api"),c("timing",["load",n]);var r=m.createElement("script");0===t.agent.indexOf("http://")||0===t.agent.indexOf("https://")?r.src=t.agent:r.src=l+"://"+t.agent,e.parentNode.insertBefore(r,e)}}function i(){"complete"===m.readyState&&o()}function o(){c("mark",["domContent",a()+T.offset],null,"api")}var a=t(5),c=t("handle"),f=t(9),u=t("ee"),s=t(7),d=t(2),p=t(3),l=d.getConfiguration("ssl")===!1?"http":"https",v=window,m=v.document,g="addEventListener",y="attachEvent",h=v.XMLHttpRequest,w=h&&h.prototype,b=!1;NREUM.o={ST:setTimeout,SI:v.setImmediate,CT:clearTimeout,XHR:h,REQ:v.Request,EV:v.Event,PR:v.Promise,MO:v.MutationObserver};var E=""+location,x={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1216.min.js"},O=h&&w&&w[g]&&!/CriOS/.test(navigator.userAgent),T=e.exports={offset:a.getLastTimestamp(),now:a,origin:E,features:{},xhrWrappable:O,userAgent:s,disabled:b};if(!b){t(1),t(6),m[g]?(m[g]("DOMContentLoaded",o,p(!1)),v[g]("load",r,p(!1))):(m[y]("onreadystatechange",i),v[y]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var M=0}},{}],"wrap-function":[function(t,e,n){function r(t,e){function n(e,n,r,f,u){function nrWrapper(){var o,a,s,p;try{a=this,o=d(arguments),s="function"==typeof r?r(o,a):r||{}}catch(l){i([l,"",[o,a,f],s],t)}c(n+"start",[o,a,f],s,u);try{return p=e.apply(a,o)}catch(v){throw c(n+"err",[o,a,v],s,u),v}finally{c(n+"end",[o,a,p],s,u)}}return a(e)?e:(n||(n=""),nrWrapper[p]=e,o(e,nrWrapper,t),nrWrapper)}function r(t,e,r,i,o){r||(r="");var c,f,u,s="-"===r.charAt(0);for(u=0;u<e.length;u++)f=e[u],c=t[f],a(c)||(t[f]=n(c,s?f+r:r,i,f,o))}function c(n,r,o,a){if(!v||e){var c=v;v=!0;try{t.emit(n,r,o,e,a)}catch(f){i([f,n,r,o],t)}v=c}}return t||(t=s),n.inPlace=r,n.flag=p,n}function i(t,e){e||(e=s);try{e.emit("internal-error",t)}catch(n){}}function o(t,e,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(t);return r.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(o){i([o],n)}for(var a in t)l.call(t,a)&&(e[a]=t[a]);return e}function a(t){return!(t&&t instanceof Function&&t.apply&&!t[p])}function c(t,e){var n=e(t);return n[p]=t,o(t,n,s),n}function f(t,e,n){var r=t[e];t[e]=c(r,n)}function u(){for(var t=arguments.length,e=new Array(t),n=0;n<t;++n)e[n]=arguments[n];return e}var s=t("ee"),d=t(10),p="nr@original",l=Object.prototype.hasOwnProperty,v=!1;e.exports=r,e.exports.wrapFunction=c,e.exports.wrapInPlace=f,e.exports.argsToArray=u},{}]},{},["loader"]);</script>
+   <meta name="viewport" content="width=device-width">
+   <link rel="profile" href="http://gmpg.org/xfn/11">
+   <link rel="pingback" href="https://www.iamcountryside.com/xmlrpc.php">
+   <link rel="manifest" href="https://cdn.iamcountryside.com/manifest.json" />
+   <link href="//fonts.googleapis.com/css?family=Roboto:300,400,500,700&#038;display=swap" rel="stylesheet">
+
+   <!--[if lt IE 9]>
+	<script src="https://www.iamcountryside.com/wp-content/themes/CountrySide/js/html5.js"></script>
+	<![endif]-->
+
+   <!-- Google Tag Manager -->
+   <script>
+      (function(w, d, s, l, i) {
+         w[l] = w[l] || [];
+         w[l].push({
+            'gtm.start': new Date().getTime(),
+            event: 'gtm.js'
+         });
+         var f = d.getElementsByTagName(s)[0],
+            j = d.createElement(s),
+            dl = l != 'dataLayer' ? '&l=' + l : '';
+         j.async = true;
+         j.src =
+            'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+         f.parentNode.insertBefore(j, f);
+      })(window, document, 'script', 'dataLayer', 'GTM-WWK7SPB');
+   </script>
+   <!-- End Google Tag Manager -->
+
+   <!-- Global site tag (gtag.js) - Google Analytics -->
+   <script async src="//www.googletagmanager.com/gtag/js?id=UA-2363792-3"></script>
+   <script>
+      window.dataLayer = window.dataLayer || [];
+
+      function gtag() {
+         dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+      gtag('config', 'UA-2363792-3');
+   </script>
+   <!-- pushly Notification -->
+   <script src="//cdn.p-n.io/pushly-sdk.min.js?domain_key=v7OiE8TQECjXWmQ8GKde9IQFZAmq0rVXkWrH" async></script>
+   <script>
+      var PushlySDK = window.PushlySDK || [];
+
+      function pushly() {
+         PushlySDK.push(arguments)
+      }
+      pushly('load', {
+         domainKey: 'v7OiE8TQECjXWmQ8GKde9IQFZAmq0rVXkWrH',
+      });
+   </script>
+
+
+   <script>(function(html){html.className = html.className.replace(/\bno-js\b/,'js')})(document.documentElement);</script>
+
+	<!-- This site is optimized with the Yoast SEO plugin v18.0 - https://yoast.com/wordpress/plugins/seo/ -->
+	<title>Raising Highland Cattle for Beef - Countryside</title>
+	<meta name="description" content="Raising Highland cattle since 1990 has not only been a passion but a way of life." />
+	<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+	<link rel="canonical" href="https://www.iamcountryside.com/cattle/raising-highland-cattle-for-beef/" />
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Raising Highland Cattle for Beef - Countryside" />
+	<meta property="og:description" content="Raising Highland cattle since 1990 has not only been a passion but a way of life." />
+	<meta property="og:url" content="https://www.iamcountryside.com/cattle/raising-highland-cattle-for-beef/" />
+	<meta property="og:site_name" content="Countryside" />
+	<meta property="article:published_time" content="2021-05-11T01:46:00+00:00" />
+	<meta property="article:modified_time" content="2021-05-11T01:46:56+00:00" />
+	<meta property="og:image" content="https://cdn.iamcountryside.com/wp-content/uploads/2019/02/GettyImages-845355220.jpg" />
+	<meta property="og:image:width" content="724" />
+	<meta property="og:image:height" content="483" />
+	<meta property="og:image:type" content="image/jpeg" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:label1" content="Written by" />
+	<meta name="twitter:data1" content="Countryside Magazine Contributor" />
+	<meta name="twitter:label2" content="Est. reading time" />
+	<meta name="twitter:data2" content="6 minutes" />
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://www.iamcountryside.com/#website","url":"https://www.iamcountryside.com/","name":"Countryside","description":"","potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://www.iamcountryside.com/?s={search_term_string}"},"query-input":"required name=search_term_string"}],"inLanguage":"en-US"},{"@type":"ImageObject","@id":"https://www.iamcountryside.com/cattle/raising-highland-cattle-for-beef/#primaryimage","inLanguage":"en-US","url":"https://cdn.iamcountryside.com/wp-content/uploads/2019/02/GettyImages-845355220.jpg","contentUrl":"https://cdn.iamcountryside.com/wp-content/uploads/2019/02/GettyImages-845355220.jpg","width":724,"height":483},{"@type":"WebPage","@id":"https://www.iamcountryside.com/cattle/raising-highland-cattle-for-beef/#webpage","url":"https://www.iamcountryside.com/cattle/raising-highland-cattle-for-beef/","name":"Raising Highland Cattle for Beef - Countryside","isPartOf":{"@id":"https://www.iamcountryside.com/#website"},"primaryImageOfPage":{"@id":"https://www.iamcountryside.com/cattle/raising-highland-cattle-for-beef/#primaryimage"},"datePublished":"2021-05-11T01:46:00+00:00","dateModified":"2021-05-11T01:46:56+00:00","author":{"@id":"https://www.iamcountryside.com/#/schema/person/631bc7031425a9fab38760acf223a0ca"},"description":"Raising Highland cattle since 1990 has not only been a passion but a way of life.","breadcrumb":{"@id":"https://www.iamcountryside.com/cattle/raising-highland-cattle-for-beef/#breadcrumb"},"inLanguage":"en-US","potentialAction":[{"@type":"ReadAction","target":["https://www.iamcountryside.com/cattle/raising-highland-cattle-for-beef/"]}]},{"@type":"BreadcrumbList","@id":"https://www.iamcountryside.com/cattle/raising-highland-cattle-for-beef/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.iamcountryside.com/"},{"@type":"ListItem","position":2,"name":"Raising Highland Cattle for Beef"}]},{"@type":"Person","@id":"https://www.iamcountryside.com/#/schema/person/631bc7031425a9fab38760acf223a0ca","name":"Countryside Magazine Contributor","image":{"@type":"ImageObject","@id":"https://www.iamcountryside.com/#personlogo","inLanguage":"en-US","url":"https://secure.gravatar.com/avatar/8e61b33eb9e949bebc2d94ce02e009e0?s=96&d=mm&r=g","contentUrl":"https://secure.gravatar.com/avatar/8e61b33eb9e949bebc2d94ce02e009e0?s=96&d=mm&r=g","caption":"Countryside Magazine Contributor"},"url":"https://www.iamcountryside.com/author/countrysidemagcontributor/"}]}</script>
+	<!-- / Yoast SEO plugin. -->
+
+
+<link rel='dns-prefetch' href='//servedby.revive-adserver.net' />
+<link rel='dns-prefetch' href='//cdnjs.cloudflare.com' />
+<link rel='dns-prefetch' href='//www.google.com' />
+<link rel='dns-prefetch' href='//maxcdn.bootstrapcdn.com' />
+<link rel='dns-prefetch' href='//cookie-cdn.cookiepro.com' />
+<link rel='dns-prefetch' href='//ajax.googleapis.com' />
+<link rel='dns-prefetch' href='//a.omappapi.com' />
+<link rel='dns-prefetch' href='//olytics.omeda.com' />
+<link rel='dns-prefetch' href='//steamboatpilot.com' />
+<link rel='dns-prefetch' href='//stackpath.bootstrapcdn.com' />
+<link rel='dns-prefetch' href='//cdn.iamcountryside.com' />
+<link href='https://fonts.gstatic.com' crossorigin rel='preconnect' />
+<link rel="alternate" type="application/rss+xml" title="Countryside &raquo; Feed" href="https://www.iamcountryside.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Countryside &raquo; Comments Feed" href="https://www.iamcountryside.com/comments/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Countryside &raquo; Raising Highland Cattle for Beef Comments Feed" href="https://www.iamcountryside.com/cattle/raising-highland-cattle-for-beef/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Countryside &raquo; Stories Feed" href="https://www.iamcountryside.com/web-stories/feed/"><style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='wp-block-library-css'  href='https://cdn.iamcountryside.com/wp-includes/css/dist/block-library/style.min.css?ver=5.6.6' type='text/css' media='all' />
+<link rel='stylesheet' id='itf-popup-css'  href='https://cdn.iamcountryside.com/wp-content/plugins/Service/css/itf_popup_min.css?ver=5.6.6' type='text/css' media='all' />
+<link rel='stylesheet' id='itf-service-css'  href='https://cdn.iamcountryside.com/wp-content/plugins/Service/css/service.css?ver=5.6.6' type='text/css' media='all' />
+<link rel='stylesheet' id='contact-form-7-css'  href='https://cdn.iamcountryside.com/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=5.3.2' type='text/css' media='all' />
+<link rel='stylesheet' id='country-ad-css-css'  href='https://cdn.iamcountryside.com/wp-content/plugins/countryside-ads/countryside-ads.css?ver=1.0.1' type='text/css' media='all' />
+<link rel='stylesheet' id='wpgms-styles-css'  href='https://cdn.iamcountryside.com/wp-content/plugins/global-multisite-search/css/gms-styles.css?ver=5.6.6' type='text/css' media='all' />
+<link rel='stylesheet' id='social_share_button_style-css'  href='https://cdn.iamcountryside.com/wp-content/plugins/itf-social-share-button/assets/front/css/style.css?ver=5.6.6' type='text/css' media='all' />
+<link rel='stylesheet' id='olytics-css'  href='https://olytics.omeda.com/olytics/css/v3/p/olytics.css?ver=5.6.6' type='text/css' media='all' />
+<link rel='stylesheet' id='sb_instagram_styles-css'  href='https://cdn.iamcountryside.com/wp-content/plugins/instagram-feed-pro/css/sb-instagram.css?ver=4.1.3' type='text/css' media='all' />
+<link rel='stylesheet' id='iacsb_styles-css'  href='https://cdn.iamcountryside.com/wp-content/plugins/subscribebutton/css/subscribebutton.css?ver=5.6.6' type='text/css' media='all' />
+<link rel='stylesheet' id='itfbootstrap-css'  href='//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css?ver=5.6.6' type='text/css' media='all' />
+<link rel='stylesheet' id='swift-main-css'  href='//steamboatpilot.com/wp-content/themes/swift-news-theme/assets/css/main.min.css?ver=5.6.6' type='text/css' media='all' />
+<link rel='stylesheet' id='font-awesome-css'  href='//stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css?ver=5.6.6' type='text/css' media='all' />
+<link rel='stylesheet' id='itftheme-style-css'  href='https://cdn.iamcountryside.com/wp-content/themes/CountrySide/style.css?ver=1642091919' type='text/css' media='all' />
+<style id='itftheme-style-inline-css' type='text/css'>
+
+			.post-navigation .nav-previous { background-image: url(https://cdn.iamcountryside.com/wp-content/uploads/2021/03/IMG_8850-825x510.jpeg); }
+			.post-navigation .nav-previous .post-title, .post-navigation .nav-previous a:hover .post-title, .post-navigation .nav-previous .meta-nav { color: #fff; }
+			.post-navigation .nav-previous a:before { background-color: rgba(0, 0, 0, 0.4); }
+		
+			.post-navigation .nav-next { background-image: url(https://cdn.iamcountryside.com/wp-content/uploads/2020/01/PeggySueLitter14-825x510.jpg); border-top: 0; }
+			.post-navigation .nav-next .post-title, .post-navigation .nav-next a:hover .post-title, .post-navigation .nav-next .meta-nav { color: #fff; }
+			.post-navigation .nav-next a:before { background-color: rgba(0, 0, 0, 0.4); }
+		
+</style>
+<link rel='stylesheet' id='select-2-css'  href='//cdnjs.cloudflare.com/ajax/libs/select2/4.0.5/css/select2.css?ver=5.6.6' type='text/css' media='all' />
+<!--[if lt IE 9]>
+<link rel='stylesheet' id='itftheme-ie-css'  href='https://www.iamcountryside.com/wp-content/themes/CountrySide/css/ie.css?ver=20141010' type='text/css' media='all' />
+<![endif]-->
+<!--[if lt IE 8]>
+<link rel='stylesheet' id='itftheme-ie7-css'  href='https://www.iamcountryside.com/wp-content/themes/CountrySide/css/ie7.css?ver=20141010' type='text/css' media='all' />
+<![endif]-->
+<link rel='stylesheet' id='itfmain-css'  href='https://cdn.iamcountryside.com/wp-content/themes/CountrySide/css/itfstyle.css?ver=5.6.6' type='text/css' media='all' />
+<link rel='stylesheet' id='itfmain-menu-css'  href='https://cdn.iamcountryside.com/wp-content/themes/CountrySide/css/responsive.css?ver=5.6.6' type='text/css' media='all' />
+<link rel='stylesheet' id='itf-theme-color-css'  href='https://cdn.iamcountryside.com/wp-content/themes/CountrySide/css/color1.css?ver=5.6.6' type='text/css' media='all' />
+<link rel='stylesheet' id='simple-favorites-css'  href='https://cdn.iamcountryside.com/wp-content/plugins/favorites/assets/css/favorites.css?ver=2.3.2' type='text/css' media='all' />
+<link rel='stylesheet' id='rpt_front_style-css'  href='https://cdn.iamcountryside.com/wp-content/plugins/itf-related-posts-view/assets/css/front.css?ver=1.0.0' type='text/css' media='all' />
+<link rel='stylesheet' id='rpt-css'  href='https://cdn.iamcountryside.com/wp-content/plugins/dk-pricr-responsive-pricing-table/inc/css/rpt_style.min.css?ver=5.6.6' type='text/css' media='all' />
+<style id='rocket-lazyload-inline-css' type='text/css'>
+.rll-youtube-player{position:relative;padding-bottom:56.23%;height:0;overflow:hidden;max-width:100%;}.rll-youtube-player iframe{position:absolute;top:0;left:0;width:100%;height:100%;z-index:100;background:0 0}.rll-youtube-player img{bottom:0;display:block;left:0;margin:auto;max-width:100%;width:100%;position:absolute;right:0;top:0;border:none;height:auto;cursor:pointer;-webkit-transition:.4s all;-moz-transition:.4s all;transition:.4s all}.rll-youtube-player img:hover{-webkit-filter:brightness(75%)}.rll-youtube-player .play{height:72px;width:72px;left:50%;top:50%;margin-left:-36px;margin-top:-36px;position:absolute;background:url(https://cdn.iamcountryside.com/wp-content/plugins/wp-rocket/assets/img/youtube.png) no-repeat;cursor:pointer}.wp-has-aspect-ratio .rll-youtube-player{position:absolute;padding-bottom:0;width:100%;height:100%;top:0;bottom:0;left:0;right:0}
+</style>
+<script type='text/javascript' src='https://cdn.iamcountryside.com/wp-includes/js/jquery/jquery.min.js?ver=3.5.1' id='jquery-core-js'></script>
+<script type='text/javascript' src='https://cdn.iamcountryside.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.3.2' id='jquery-migrate-js'></script>
+<script type='text/javascript' src='//servedby.revive-adserver.net/asyncjs.php?ver=5.6.6' id='itf-revive-js'></script>
+<script type='text/javascript' src='https://cdn.iamcountryside.com/wp-content/plugins/Service/js/itf_popup.min.js?ver=5.6.6' id='itf-popup-js-js'></script>
+<script type='text/javascript' id='itf-cart-js-extra'>
+/* <![CDATA[ */
+var ITF_SERVICE_OBJ = {"ajax_url":"https:\/\/www.iamcountryside.com\/wp-admin\/admin-ajax.php"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://cdn.iamcountryside.com/wp-content/plugins/Service/js/carts.js?ver=5.6.6' id='itf-cart-js'></script>
+<script type='text/javascript' src='//cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js?ver=5.6.6' id='itf-validation-js'></script>
+<script type='text/javascript' id='wpgms-scripts-js-extra'>
+/* <![CDATA[ */
+var wpgms_ajax_params = {"wpgms_ajax_nonce":"4345d9e889","wpgms_ajax_url":"https:\/\/www.iamcountryside.com\/wp-admin\/admin-ajax.php"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://cdn.iamcountryside.com/wp-content/plugins/global-multisite-search/js/wpgms-scripts.js?ver=5.6.6' id='wpgms-scripts-js'></script>
+<script type='text/javascript' id='social_share_button_front_js-js-extra'>
+/* <![CDATA[ */
+var social_share_button_ajax = {"social_share_button_ajaxurl":"https:\/\/www.iamcountryside.com\/wp-admin\/admin-ajax.php"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://cdn.iamcountryside.com/wp-content/plugins/itf-social-share-button/assets/front/js/scripts.js?ver=5.6.6' id='social_share_button_front_js-js'></script>
+<script type='text/javascript' src='https://cdn.iamcountryside.com/wp-content/themes/CountrySide/js/popper.min.js?ver=20150330' id='itf-popper-js'></script>
+<script type='text/javascript' src='https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js?ver=20201228' id='itf-bootstrap-js'></script>
+<script type='text/javascript' src='https://cdn.iamcountryside.com/wp-content/themes/CountrySide/js/modernizr-3.6.0.min.js?ver=20150330' id='itf-modernizr-js'></script>
+<script type='text/javascript' src='//cdnjs.cloudflare.com/ajax/libs/select2/4.0.5/js/select2.min.js?ver=20150330' id='itf-select2-js'></script>
+<script type='text/javascript' src='https://cdn.iamcountryside.com/wp-content/themes/CountrySide/js/jquery.sticky.js?ver=20150330' id='itf-sticky-js'></script>
+<script type='text/javascript' src='https://cdn.iamcountryside.com/wp-content/themes/CountrySide/js/pushmenu.js?ver=20150330' id='itf-leftmenu-js'></script>
+<script type='text/javascript' id='favorites-js-extra'>
+/* <![CDATA[ */
+var favorites_data = {"ajaxurl":"https:\/\/www.iamcountryside.com\/wp-admin\/admin-ajax.php","nonce":"895ed9f0f7","favorite":"<i class=\"fa fa-plus-square-o\"><\/i> Add to Favorites ","favorited":"My Favorite ","includecount":"","indicate_loading":"","loading_text":"Loading","loading_image":"","loading_image_active":"","loading_image_preload":"","cache_enabled":"1","button_options":{"button_type":"custom","custom_colors":true,"box_shadow":false,"include_count":false,"default":{"background_default":"#689155","border_default":false,"text_default":false,"icon_default":false,"count_default":false},"active":{"background_active":false,"border_active":false,"text_active":false,"icon_active":false,"count_active":false}},"authentication_modal_content":"<p>Please login to add favorites.<\/p><p><a href=\"#\" data-favorites-modal-close>Dismiss this notice<\/a><\/p>","authentication_redirect":"","dev_mode":"","logged_in":"","user_id":"0","authentication_redirect_url":"https:\/\/www.iamcountryside.com\/wp-login.php"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://cdn.iamcountryside.com/wp-content/plugins/favorites/assets/js/favorites.min.js?ver=2.3.2' id='favorites-js'></script>
+<script type='text/javascript' src='https://cdn.iamcountryside.com/wp-content/plugins/dk-pricr-responsive-pricing-table/inc/js/rpt.min.js?ver=5.6.6' id='rpt-js'></script>
+<link rel="https://api.w.org/" href="https://www.iamcountryside.com/wp-json/" /><link rel="alternate" type="application/json" href="https://www.iamcountryside.com/wp-json/wp/v2/posts/4807" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.iamcountryside.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://cdn.iamcountryside.com/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 5.6.6" />
+<link rel='shortlink' href='https://www.iamcountryside.com/?p=4807' />
+<link rel="alternate" type="application/json+oembed" href="https://www.iamcountryside.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.iamcountryside.com%2Fcattle%2Fraising-highland-cattle-for-beef%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://www.iamcountryside.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.iamcountryside.com%2Fcattle%2Fraising-highland-cattle-for-beef%2F&#038;format=xml" />
+<script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
+		<script>
+		(function(h,o,t,j,a,r){
+			h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+			h._hjSettings={hjid:2360380,hjsv:5};
+			a=o.getElementsByTagName('head')[0];
+			r=o.createElement('script');r.async=1;
+			r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+			a.appendChild(r);
+		})(window,document,'//static.hotjar.com/c/hotjar-','.js?sv=');
+		</script>
+		<!-- Start of ogdenpubs Zendesk Widget script -->
+<script id="ze-snippet" src="https://static.zdassets.com/ekr/snippet.js?key=88f99c97-456b-4786-b871-9fabec457063"></script>
+<!-- End of ogdenpubs Zendesk Widget script -->
+<script>
+            window.googletag = window.googletag || {cmd: []};
+            googletag.cmd.push(function() {
+                googletag.defineSlot('/1032081/CSTK_Article_300x250', [300, 250], 'div-gpt-ad-1663356543829-0').addService(googletag.pubads());
+                googletag.pubads().collapseEmptyDivs();
+                googletag.enableServices();
+            });
+            </script>       <style>
+        #related_posts_thumbnails li{
+            border-right: 1px solid #dddddd;
+            background-color: #ffffff       }
+        #related_posts_thumbnails li:hover{
+            background-color: #eeeeee;
+        }
+        .relpost_content{
+            font-size: 15px;
+            color: #333333;
+        padding:10px 0px 15px 0px;
+        }
+        .relpost-block-single{
+            background-color: #ffffff;
+            border-right: 1px solid  #dddddd;
+            border-left: 1px solid  #dddddd;
+            margin-right: -1px;
+        }
+        .relpost-block-single:hover{
+            background-color: #eeeeee;
+        }
+        </style>
+
+        <!-- WhatCounts Tracking - Main Script -->
+<script type="text/javascript"> 
+!function(){ var analytics=window.analytics=window.analytics||[]; 
+if(!analytics.initialize) { if(analytics.invoked) { window.console&&console. 
+error&&console.error("Segment snippet included twice."); } else { analytics. 
+invoked=!0; analytics.methods=["trackSubmit","debug", 
+"trackClick","trackLink","trackForm","pageview","identify","group","track","ready","alias","page","once","off","on"]; 
+analytics.factory=function(t){ return function() { var e=Array.prototype.slice. 
+call(arguments); e.unshift(t); analytics.push(e); return analytics; } }; 
+for(var t=0;t<analytics.methods.length;t++){ var e=analytics.methods[t]; 
+analytics[e]=analytics.factory(e) } analytics.load=function(t){ analytics. 
+apiKey = t; var e=document.createElement("script"); e.type="text/javascript"; 
+e.async=!0; e.src="https://static.whatcounts.com/analytics.min.js"; var 
+n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(e,n) }; 
+analytics.SNIPPET_VERSION="4.0.0"; 
+window.analytics.load('VXlWOYGXmaNdQIvkPUruJHF2xnAOO8YG'); 
+window.analytics.page(undefined, undefined, undefined, {wcapiVersion: '2.0'}); 
+}}}(); 
+</script> 
+<!-- End WhatCounts Tracking - Main Script -->
+<!-- Olytics Tracking - Main Script -->
+<script type="text/javascript">
+window.olytics||(window.olytics=[]),window.olytics.methods=["fire","confirm"],window.olytics.factory=function(i){return function(){var t=Array.prototype.slice.call(arguments);return t.unshift(i),window.olytics.push(t),window.olytics}};for(var i=0;i<window.olytics.methods.length;i++){var method=window.olytics.methods[i];window.olytics[method]=window.olytics.factory(method)}olytics.load=function(i){if(!document.getElementById("olyticsImport")){window.a=window.olytics;var t=document.createElement("script");t.async=!0,t.id="olyticsImport",t.type="text/javascript";var o="";void 0!==i&&void 0!==i.oid&&(o=i.oid),t.setAttribute("data-oid",o),t.src="https://olytics.omeda.com/olytics/js/v3/p/olytics.min.js",t.addEventListener("load",function(t){for(olytics.initialize({Olytics:i});window.a.length>0;){var o=window.a.shift(),s=o.shift();olytics[s]&&olytics[s].apply(olytics,o)}},!1);var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(t,s)}},olytics.load({oid:"3e1bb926491a4065a30ea1d1de44a04e"});
+</script>
+<!-- End Olytics Tracking - Main Script -->
+<!-- Olytics Tracking - Article Content Script -->
+<script type="text/javascript">
+olytics.fire(
+  {
+    behaviorId: '5346E6891023A5E',
+    category: 'Cattle',
+    tag: 'beef-cattle, cattle-breeds, dairy-cattle'
+  }
+);
+</script>
+<!-- End Olytics Tracking - Article Content Script -->
+<link rel="icon" href="https://cdn.iamcountryside.com/wp-content/uploads/2019/04/cropped-Final-Countryside-Icon-Green-32x32.jpg" sizes="32x32" />
+<link rel="icon" href="https://cdn.iamcountryside.com/wp-content/uploads/2019/04/cropped-Final-Countryside-Icon-Green-192x192.jpg" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://cdn.iamcountryside.com/wp-content/uploads/2019/04/cropped-Final-Countryside-Icon-Green-180x180.jpg" />
+<meta name="msapplication-TileImage" content="https://cdn.iamcountryside.com/wp-content/uploads/2019/04/cropped-Final-Countryside-Icon-Green-270x270.jpg" />
+<!-- Countryside Tracking Code snippets ->>>----------->
+<script type="text/javascript" async src="https://tag.simpli.fi/sifitag/257bb6b0-6b12-0135-c313-06a9ed4ca31b"></script>
+<script src="https://js.adsrvr.org/up_loader.1.1.0.js"></script>
+<script type="text/javascript">
+	// Script for https://js.adsrvr.org/up_loader.1.1.0.js
+	ttd_dom_ready( function() {
+		if (typeof TTDUniversalPixelApi === 'function') {
+			var universalPixelApi = new TTDUniversalPixelApi();
+			universalPixelApi.init("eac6kka", ["0vwwwr2"], "https://insight.adsrvr.org/track/up");
+		}
+	});
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-997905360"></script>
+<script>
+	window.dataLayer = window.dataLayer || [];
+    function gtag(){
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'AW-997905360');
+</script>
+
+<!-- Facebook Pixel Code -->
+<script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '169911680232961');
+  fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=169911680232961&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Facebook Pixel Code -->
+<!-- <-------<<<- Countryside Tracking Code Snippets -->
+		<style type="text/css" id="wp-custom-css">
+			.widget_nav_menu ul {
+    list-style-type: none;
+    margin: 0 auto !important;
+    padding: 0;
+    display: flex;
+    width: 65% !important;
+}
+
+.widget_nav_menu li {
+    margin: 0 auto !important;
+    padding: 0;
+    padding: 5px !important;
+}
+
+.custom-html-widget ul.list-inline {
+    list-style-type: none;
+    margin: 0 auto !important;
+    padding: 0;
+    display: table;
+}
+.custom-html-widget ul li{
+	padding-right:10px !important;
+}
+i.fa.fa-facebook-square {
+    color:#666666;
+}
+i.fa.fa-facebook-square:hover {
+    color: #3b5998;
+}
+i.fa.fa-instagram:hover {
+    color: #fb3958;
+}
+i.fa.fa-pinterest:hover {
+    color: #c8232c;
+}
+
+
+@media(min-width:200px) and (max-width:550px){
+	.widget_nav_menu ul {
+    list-style-type: none;
+    width: 100% !important;
+    display: inline;
+}
+.widget_nav_menu li {
+    margin: 0;
+    padding: 0;
+    padding: 5px !important;
+}
+	
+}
+/* hide the search button categories */
+.input-group-prependsearch {
+	visibility: hidden;
+}
+.subscribelink {
+	display: none !important;
+}
+/* btnnavsubscribe */
+.btnnavsubscribe {
+    box-shadow: 0px 0px 4px 0px #333333;
+    background: linear-gradient(to bottom, #ffaa22 5%, #E7Af4F 100%);
+    background-color: #FFAA22;
+    border-radius: 7px;
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff;
+    font-family: Arial;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 12px 14px;
+    text-transform: none;
+}
+#btnnavsubscribeparent {
+    margin: 5px 0px 0px 0px; 
+    padding: 0px 0px 0px 0px;
+}
+/* adding full width to newsletter popup form  */
+div#wcpopupmodal-modal.wcpopupmodal-open .wcpopupmodal-content .col_2blocks, .wcpopupmodal-modal.wcpopupmodal-open .wcpopupmodal-content .col_2blocks {
+width: 100% !important
+}
+/* hide google recaptcha */
+.grecaptcha-badge {
+	visibility: hidden;
+}
+
+/* Make youtube videos full width */
+.video-responsive {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%;
+	margin-bottom: 1em;
+	margin-top: 1em;
+}
+.video-responsive iframe, .video-responsive video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  	margin-bottom: 1em;
+  	margin-top: 0.5em;
+}
+/* optin monster input labels */
+div.segments {
+    margin-top: 1em !important;
+    margin-bottom: 1em !important;
+}
+span.segment-label {
+    font-size: 125% !important;
+}
+.blog-list > .row {
+padding-top: 2rem;
+}
+/*.pm_overlay {
+	display: none !important;
+}*/
+.learndash-wrapper {
+    font-size: larger;
+}		</style>
+		<noscript><style id="rocket-lazyload-nojs-css">.rll-youtube-player, [data-lazy-src]{display:none !important;}</style></noscript>
+   <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+   <script>
+      (adsbygoogle = window.adsbygoogle || []).push({
+         google_ad_client: "ca-pub-1997821781151466",
+         enable_page_level_ads: true
+      });
+   </script>
+   <script type='text/javascript' src='//servedby.revive-adserver.net/spcjs.php?id=166'></script>
+
+</head>
+
+<body class="post-template-default single single-post postid-4807 single-format-standard wp-custom-logo wp-embed-responsive">
+
+   <!-- Google Tag Manager (noscript) -->
+   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WWK7SPB" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+   <!-- End Google Tag Manager (noscript) -->
+   <div id="container">
+            <header>
+       <nav id="nav-mobile" class="d-lg-none d-xl-none py-1">
+            <div class="col-sm-12 col-md-3 top-logo">
+                <ul class="justify-content-around align-items-center d-flex top-logo mt-2">
+                <li class="active"><a href="https://www.iamcountryside.com"><img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E" data-lazy-src="https://cdn.iamcountryside.com/wp-content/themes/CountrySide/images/logo/countryside-logo.svg"><noscript><img src="https://cdn.iamcountryside.com/wp-content/themes/CountrySide/images/logo/countryside-logo.svg"></noscript></a></li>
+                <li class="logo-gray"><a href="https://backyardpoultry.iamcountryside.com"><img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E" data-lazy-src="https://cdn.iamcountryside.com/wp-content/themes/CountrySide/images/logo/backyard-logo.svg"><noscript><img src="https://cdn.iamcountryside.com/wp-content/themes/CountrySide/images/logo/backyard-logo.svg"></noscript></a></li>
+                              <li class="logo-gray"><a href="https://backyardgoats.iamcountryside.com"><img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E" data-lazy-src="https://cdn.iamcountryside.com/wp-content/themes/CountrySide/images/logo/goar-journal-logo.svg"><noscript><img src="https://cdn.iamcountryside.com/wp-content/themes/CountrySide/images/logo/goar-journal-logo.svg"></noscript></a></li>
+                              <li class="logo-gray"><a href="https://backyardbeekeeping.iamcountryside.com"><img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E" data-lazy-src="https://cdn.iamcountryside.com/wp-content/themes/CountrySide/images/logo/Backyard-Bees-logo.svg?ver=20210621123000"><noscript><img src="https://cdn.iamcountryside.com/wp-content/themes/CountrySide/images/logo/Backyard-Bees-logo.svg?ver=20210621123000"></noscript></a></li>
+                </ul>
+            </div> 
+            <div class="d-flex justify-content-between align-items-center">
+               <div class="mx-3 pr-3">
+                  <button class="hamburger-button collapsed" type="button" data-toggle="collapse" data-target="#nav-mobile-menu" aria-controls="nav-mobile-menu" aria-expanded="false" aria-label="Toggle navigation">
+                     <svg class="svg-icon fa-bars">
+                        <use class="fa-bars mr-1" xlink:href="#fa-bars"></use>
+                     </svg>
+                     <svg class="svg-icon fa-times">
+                        <use class="fa-times mr-1" xlink:href="#fa-times"></use>
+                     </svg>
+                  </button>
+               </div>
+               <div class="col-md-3 col-lg-4 col-6 logo col-sm-6">
+               <a href="https://www.iamcountryside.com" class="custom-logo-link" rel="home" itemprop="url"><!-- CBID 1 -->
+               <img style="max-height:unset;" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E"     
+               class="custom-logos" alt="Countryside" itemprop="logo" data-lazy-src="https://cdn.iamcountryside.com/wp-content/themes/CountrySide/images/logo/1logov2.svg?ver=20210621123000"><noscript><img style="max-height:unset;" src="https://cdn.iamcountryside.com/wp-content/themes/CountrySide/images/logo/1logov2.svg?ver=20210621123000"     
+               class="custom-logos" alt="Countryside" itemprop="logo"></noscript></a>
+               </div>
+               <div class="mx-3 d-flex">
+                  <button class="search-button collapsed" type="button" data-toggle="collapse" data-target="#nav-mobile-search" aria-controls="nav-mobile-search" aria-expanded="false" aria-label="Toggle search">
+                     <svg class="svg-icon fa-search">
+                        <use class="fa-search ml-1" xlink:href="#fa-search"></use>
+                     </svg>
+                     <svg class="svg-icon fa-times">
+                        <use class="fa-times mr-1" xlink:href="#fa-times"></use>
+                     </svg>
+                  </button>
+                   <ul class="list-inline mx-2 pt-3 pl-2 my-account-dd">
+                        <li class="d-none d-sm-none d-md-block">
+                            <a href="https://www.iamcountryside.com/wp-login.php?action=register" class="subscribelink"><span class="btn subscribelnk">Signup</span></a>
+                        </li>
+                        <li class="dropdown">
+                            <a class="" data-toggle="dropdown" href="#" aria-expanded="false">
+                            <span class="d-none d-sm-none d-md-block">Hello, Guest <i class="fa fa-angle-down pl-1"></i></span>
+                            <span class="d-block d-sm-block d-md-none">
+                                <i class="fa fa-user" aria-hidden="true"></i>
+                            </span>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right" x-placement="bottom-end" style="position: absolute; transform: translate3d(-165px, 59px, 0px); top: 0px; left: 0px; will-change: transform;">
+                                <a class="dropdown-item border-bottom" href="https://www.iamcountryside.com/wp-login.php?action=register"><i class="fa fa-user px-1"></i> Register</a>
+                                <a class="dropdown-item border-bottom" href="https://www.iamcountryside.com/wp-login.php?redirect_to=https%3A%2F%2Fwww.iamcountryside.com%2F"><i class="fa fa-sign-in px-1"></i>Sign-in</a>
+                                <a class="dropdown-item" href="https://simplecirc.com/subscriber_login/countryside/"><i class="fa fa-book px-1"></i> Magazine Account</a>
+                            </div>
+                        </li>
+                    </ul>
+               </div>
+            </div>
+         </nav>
+
+         <div id="nav-mobile-menu" class="hamburger-button-dropdown alt-menu collapse">
+            <div class="card-columns">
+               <div class="card-container">
+            <div class="card">
+                     <h2 class="d-lg-block"><a href="#">Animals</a></h2><div class="row"><div class="col col-md-12"><ul><li><a href="//backyardbeekeeping.iamcountryside.com">Beekeeping</a></li><li><a href="https://www.iamcountryside.com/cattle/">Cattle</a></li><li><a href="//backyardpoultry.iamcountryside.com">Chickens & Poultry</a></li><li><a href="//backyardgoats.iamcountryside.com">Goats</a></li></div><div class="col col-md-12"><ul><li><a href="https://www.iamcountryside.com/horses-donkeys/">Horses & Donkeys</a></li><li><a href="https://www.iamcountryside.com/pigs/">Pigs</a></li><li><a href="https://www.iamcountryside.com/rabbits/">Rabbits</a></li><li><a href="https://www.iamcountryside.com/sheep/">Sheep</a></li></ul></div><!-- END .col --></div><!-- END .row --></div><!-- END .card --><div class="card">
+                     <h2 class="d-lg-block"><a href="#">Farm</a></h2><div class="row"><div class="col col-md-12"><ul><li><a href="https://www.iamcountryside.com/tractors-farm-equipment/">Farm Equipment & Tractors</a></li></div><div class="col col-md-12"><ul><li><a href="https://www.iamcountryside.com/fences-sheds-barns/">Fences, Sheds &amp; Barns</a></li></ul></div><!-- END .col --></div><!-- END .row --></div><!-- END .card --><div class="card">
+                     <h2 class="d-lg-block"><a href="#">Food</a></h2><div class="row"><div class="col col-md-12"><ul><li><a href="https://www.iamcountryside.com/canning-kitchen/">Canning &amp; Kitchen</a></li><li><a href="https://www.iamcountryside.com/growing/">Growing</a></li></div><div class="col col-md-12"><ul><li><a href="https://www.iamcountryside.com/recipes/">Recipes</a></li></ul></div><!-- END .col --></div><!-- END .row --></div><!-- END .card --><div class="card">
+                     <h2 class="d-lg-block"><a href="#">Homesteading</a></h2><div class="row"><div class="col col-md-12"><ul><li><a href="https://www.iamcountryside.com/homesteading/">Homesteading</a></li><li><a href="https://www.iamcountryside.com/holiday/">Holiday</a></li></div><div class="col col-md-12"><ul><li><a href="https://www.iamcountryside.com/self-reliance/">Self-Reliance</a></li><li><a href="https://www.iamcountryside.com/soapmaking/">Soapmaking</a></li></ul></div><!-- END .col --></div><!-- END .row --></div><!-- END .card --><div class="card">
+                     <h2 class="d-lg-block"><a href="#">Complimentary</a></h2><div class="row"><div class="col col-md-12"><ul><li><a href="https://www.iamcountryside.com/homesteading/download-our-free-guides/">Free Guides</a></li><li><a href="https://www.iamcountryside.com/newsletter/">Free Newsletter</a></li></div><div class="col col-md-12"><ul><li><a href="https://www.iamcountryside.com/giveaways/">Giveaways</a></li></ul></div><!-- END .col --></div><!-- END .row --></div><!-- END .card --><div class="card">
+                     <h2 class="d-lg-block"><a href="https://www.iamcountryside.com/all-membership/">Subscribe</a></h2></div><!-- END .card --><div class="card">
+                     <h2 class="d-lg-block"><a href="https://shop.iamcountryside.com/">Shop</a></h2></div><!-- END .card --><div class="card">
+                     <h2 class="d-lg-block"><a href="#">Web Stories</a></h2><div class="row"><div class="col col-md-12"><ul><li><a href="http://iamcountryside.com/web-stories/kunekune-pigs">KuneKune Pigs</a></li><li><a href="https://www.iamcountryside.com/web-stories/sustainable-rose-care">Sustainable Roses</a></li></div><div class="col col-md-12"><ul><li><a href="https://www.iamcountryside.com/web-stories/picking-the-best-tractor-for-small-farms/">Tractors for Small Farms</a></li></ul></div><!-- END .col --></div><!-- END .row --></div><!-- END .card --> </div>
+            </div>
+            <div class="card-columns">
+               <div class="card-container">
+            <div class="card">
+                     <h2 class="d-lg-block"><a href="https://www.iamcountryside.com/countryside-member/">MEMBERS ONLY</a></h2></div><!-- END .card --><div class="card">
+                     <h2 class="d-lg-block"><a href="https://www.iamcountryside.com/issues/">Magazine</a></h2></div><!-- END .card --><div class="card">
+                     <h2 class="d-lg-block"><a href="https://simplecirc.com/subscriber_login/countryside/">Manage My Account</a></h2></div><!-- END .card --><div class="card">
+                     <h2 class="d-lg-block"><a href="https://www.iamcountryside.com/homesteading/how-to-connect-with-our-experts/">Experts on Staff</a></h2></div><!-- END .card --><div class="card">
+                     <h2 class="d-lg-block"><a href="https://www.iamcountryside.com/homesteading/countryside-tutorials/">Tutorials</a></h2></div><!-- END .card --><div class="card">
+                     <h2 class="d-lg-block"><a href="https://www.iamcountryside.com/renew/">Renew Your Subscription</a></h2></div><!-- END .card --><div class="card">
+                     <h2 class="d-lg-block"><a href="https://www.iamcountryside.com/partner-perks/countryside-free-shipping/">Free Shipping</a></h2></div><!-- END .card --> </div>
+            </div>
+         </div>
+         <div id="nav-mobile-search" class="search-button-dropdown collapse position-absolute shadow-sm d-lg-none d-xl-noned-lg-none d-xl-none alt-menu">
+            <form class="search-form form-inline col-sm-12 d-flex" action="https://www.iamcountryside.com/" role="search" method="get">
+               <input type="text" name="s" value="" class="form-control w-75 custom-search sm-col-12 border-0 m-0 br-0" aria-label="Text input with dropdown button" placeholder="Search ...">
+               <input type="hidden" name="post_type" value="post" />
+               <button class="btn custom-search border-0 w-25 px-3" type="submit">Search</button>
+               <input type="hidden" name="range" value="2021-08-15">
+            </form>
+         </div>
+                  <div id="fixHeader">
+            <div class="top-fixs d-sm-none d-md-none d-lg-block d-xl-block" id="top-fixs">
+               <div id="pm_menu" class="leftsidebar pm_close" role="navigation">
+                  <div class="closemenu"><a class="openbtns fa fa-close itfclosebtn"></a>
+                  </div>
+                  <ul id="side-bar-menu-sec" class="sidebarmenu"><li id="menu-item-19024" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-19024"><a href="https://www.iamcountryside.com/all-membership/">Subscribe Now</a></li>
+<li id="menu-item-19023" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-has-children menu-item-19023"><a href="https://www.iamcountryside.com/">Homesteading</a>
+<ul class="sub-menu">
+	<li id="menu-item-146" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-146"><a href="https://www.iamcountryside.com/homesteading/">Homesteading</a></li>
+	<li id="menu-item-151" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-151"><a href="https://www.iamcountryside.com/cattle/">Cattle</a></li>
+	<li id="menu-item-156" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-156"><a href="https://www.iamcountryside.com/canning-kitchen/">Canning &#038; Kitchen</a></li>
+	<li id="menu-item-164" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-164"><a href="https://www.iamcountryside.com/growing/">Growing</a></li>
+	<li id="menu-item-169" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-169"><a href="https://www.iamcountryside.com/tractors-farm-equipment/">Tractors &#038; Farm Equipment</a></li>
+	<li id="menu-item-174" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-174"><a href="https://www.iamcountryside.com/self-reliance/">Self-Reliance</a></li>
+	<li id="menu-item-179" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-179"><a href="https://www.iamcountryside.com/soapmaking/">Soapmaking</a></li>
+</ul>
+</li>
+<li id="menu-item-184" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-184"><a href="https://backyardpoultry.iamcountryside.com/">Poultry</a></li>
+<li id="menu-item-136" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-136"><a href="https://backyardgoats.iamcountryside.com/">Goats</a></li>
+<li id="menu-item-141" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-141"><a href="https://backyardbeekeeping.iamcountryside.com/">Beekeeping</a></li>
+<li id="menu-item-19025" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-19025"><a href="https://www.iamcountryside.com/shop/">Shop</a></li>
+<li id="menu-item-90855" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-90855"><a href="#">For Members</a>
+<ul class="sub-menu">
+	<li id="menu-item-90856" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-90856"><a href="https://www.iamcountryside.com/issues/">Issues</a></li>
+	<li id="menu-item-90858" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-90858"><a href="https://www.iamcountryside.com/partner-perks/countryside-free-shipping/">Free Shipping</a></li>
+	<li id="menu-item-103509" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-103509"><a href="https://www.iamcountryside.com/homesteading/how-to-connect-with-our-experts/">Ask the Expert</a></li>
+	<li id="menu-item-90857" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-90857"><a href="https://www.iamcountryside.com/homesteading/countryside-tutorials/">Tutorials</a></li>
+</ul>
+</li>
+</ul>               </div>
+
+               <div class="container-fluid topBg " id="fixtopbars">
+                  <div class="container ">
+                     <div class="row justify-content-between align-items-center">
+
+                        
+                        <div class="col-sm-12 col-md-3 col-lg-4 top-logo">
+                           <ul class="list-inline top-logo">
+                              <li class="active"><a href="https://www.iamcountryside.com"><img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E" data-lazy-src="https://cdn.iamcountryside.com/wp-content/themes/CountrySide/images/logo/countryside-logo.svg"><noscript><img src="https://cdn.iamcountryside.com/wp-content/themes/CountrySide/images/logo/countryside-logo.svg"></noscript></a></li>
+                              <li class="logo-gray"><a href="https://backyardpoultry.iamcountryside.com"><img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E" data-lazy-src="https://cdn.iamcountryside.com/wp-content/themes/CountrySide/images/logo/backyard-logo.svg"><noscript><img src="https://cdn.iamcountryside.com/wp-content/themes/CountrySide/images/logo/backyard-logo.svg"></noscript></a></li>
+                              <li class="logo-gray"><a href="https://backyardgoats.iamcountryside.com"><img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E" data-lazy-src="https://cdn.iamcountryside.com/wp-content/themes/CountrySide/images/logo/goar-journal-logo.svg"><noscript><img src="https://cdn.iamcountryside.com/wp-content/themes/CountrySide/images/logo/goar-journal-logo.svg"></noscript></a></li>
+                              <li class="logo-gray"><a href="https://backyardbeekeeping.iamcountryside.com"><img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E" data-lazy-src="https://cdn.iamcountryside.com/wp-content/themes/CountrySide/images/logo/Backyard-Bees-logo.svg?ver=20210621123000"><noscript><img src="https://cdn.iamcountryside.com/wp-content/themes/CountrySide/images/logo/Backyard-Bees-logo.svg?ver=20210621123000"></noscript></a></li>
+
+                           </ul>
+                        </div>
+
+                        <div class="col-sm-4 col-md-4 col-lg-4  col-3  toggle-menu">
+                           <div class="d-flex flex-row">
+                              <div class="p-2">
+                                 <button class="openbtn" id="menu-links"><i class="fa fa-bars" aria-hidden="true"></i></button>
+                              </div>
+                              <div class="ppsearch"><i class="fa fa-search"></i> </div>
+                           </div>
+                        </div>
+
+                        <div class="col-sm-4 col-md-3 col-lg-4  col-6 logo">
+                            
+                                                      <a href="https://www.iamcountryside.com" class="custom-logo-link" rel="home" itemprop="url"><img height="70" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%2070'%3E%3C/svg%3E" class="custom-logos" alt="Countryside" itemprop="logo" data-lazy-src="https://cdn.iamcountryside.com/wp-content/themes/CountrySide/images/logo/1logov2.svg?ver=20210621123000"><noscript><img height="70" src="https://cdn.iamcountryside.com/wp-content/themes/CountrySide/images/logo/1logov2.svg?ver=20210621123000" class="custom-logos" alt="Countryside" itemprop="logo"></noscript></a>
+
+                        </div>
+                        <div class="col-sm-4 col-md-6 col-lg-4  col-3 top-r-section">
+                           <ul class="list-inline my-account-dd">
+
+                                                               <li class="d-none d-sm-none d-md-block">
+                                    <a href="https://www.iamcountryside.com/wp-login.php?action=register" class="subscribelink"><span class="btn subscribelnk">Signup</span></a>
+                                 </li>
+                                 <li class="dropdown">
+                                    <a class="" data-toggle="dropdown" href="#">
+                                       <span class="d-none d-sm-none d-md-block">Hello, Guest <i class="fa fa-angle-down pl-1"></i>
+                                       </span>
+                                       <span class="d-block d-sm-block d-md-none">
+                                          <i class="fa fa-user" aria-hidden="true"></i>
+                                       </span>
+                                    </a>
+                                    <div class="dropdown-menu dropdown-menu-right">
+                                       <a class="dropdown-item border-bottom" href="https://www.iamcountryside.com/wp-login.php?action=register"><i class="fa fa-user px-1"></i> Register</a>
+                                                                              <a class="dropdown-item border-bottom" href="https://www.iamcountryside.com/wp-login.php?redirect_to=https%3A%2F%2Fwww.iamcountryside.com%2Fcattle%2Fraising-highland-cattle-for-beef%2F"><i class="fa fa-sign-in px-1"></i>Sign-in</a>
+                                                                                 <a class="dropdown-item" href="https://simplecirc.com/subscriber_login/countryside/"><i class="fa fa-book px-1"></i> Magazine Account</a>
+                                                                                                                  </div>
+                                 </li>
+                                                         </ul>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+
+               <div class="container-fluid header-bg top-fix">
+                  <div class="container ">
+                     <div class="row text-white">
+                        <div class="col-sm-8 main-menu">
+                           <nav class="navbar navbar-expand-md navbar-dark">
+                              <!-- Navbar links -->
+                              <div id="collapsibleNavbar" class="collapse navbar-collapse"><ul id="nav-main-menu-bars" class="itfmenus"><li id="menu-item-117036" class="mr-2 menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-117036"><a href="#">Animals</a>
+<ul class="sub-menu">
+	<li id="menu-item-15" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-15"><a href="//backyardbeekeeping.iamcountryside.com">Beekeeping</a></li>
+	<li id="menu-item-4773" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-4773"><a href="https://www.iamcountryside.com/cattle/">Cattle</a></li>
+	<li id="menu-item-13" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-13"><a href="//backyardpoultry.iamcountryside.com">Chickens &#038; Poultry</a></li>
+	<li id="menu-item-14" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-14"><a href="//backyardgoats.iamcountryside.com">Goats</a></li>
+	<li id="menu-item-117037" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-117037"><a href="https://www.iamcountryside.com/horses-donkeys/">Horses &#038; Donkeys</a></li>
+	<li id="menu-item-4768" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-4768"><a href="https://www.iamcountryside.com/pigs/">Pigs</a></li>
+	<li id="menu-item-117038" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-117038"><a href="https://www.iamcountryside.com/rabbits/">Rabbits</a></li>
+	<li id="menu-item-4770" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-4770"><a href="https://www.iamcountryside.com/sheep/">Sheep</a></li>
+</ul>
+</li>
+<li id="menu-item-117041" class="mr-2 menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-117041"><a href="#">Farm</a>
+<ul class="sub-menu">
+	<li id="menu-item-4771" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-4771"><a href="https://www.iamcountryside.com/tractors-farm-equipment/">Farm Equipment &#038; Tractors</a></li>
+	<li id="menu-item-4772" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-4772"><a href="https://www.iamcountryside.com/fences-sheds-barns/">Fences, Sheds &amp; Barns</a></li>
+</ul>
+</li>
+<li id="menu-item-117039" class="mr-2 menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-117039"><a href="#">Food</a>
+<ul class="sub-menu">
+	<li id="menu-item-4774" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-4774"><a href="https://www.iamcountryside.com/canning-kitchen/">Canning &amp; Kitchen</a></li>
+	<li id="menu-item-202" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-202"><a href="https://www.iamcountryside.com/growing/">Growing</a></li>
+	<li id="menu-item-117040" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-117040"><a href="https://www.iamcountryside.com/recipes/">Recipes</a></li>
+</ul>
+</li>
+<li id="menu-item-19" class="mr-2 menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-19"><a href="#">Homesteading</a>
+<ul class="sub-menu">
+	<li id="menu-item-4456" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-4456"><a href="https://www.iamcountryside.com/homesteading/">Homesteading</a></li>
+	<li id="menu-item-117043" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-117043"><a href="https://www.iamcountryside.com/holiday/">Holiday</a></li>
+	<li id="menu-item-4769" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-4769"><a href="https://www.iamcountryside.com/self-reliance/">Self-Reliance</a></li>
+	<li id="menu-item-203" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-203"><a href="https://www.iamcountryside.com/soapmaking/">Soapmaking</a></li>
+</ul>
+</li>
+<li id="menu-item-117042" class="mr-2 menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-117042"><a href="#">Complimentary</a>
+<ul class="sub-menu">
+	<li id="menu-item-28307" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-28307"><a href="https://www.iamcountryside.com/homesteading/download-our-free-guides/">Free Guides</a></li>
+	<li id="menu-item-117669" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-117669"><a href="https://www.iamcountryside.com/newsletter/">Free Newsletter</a></li>
+	<li id="menu-item-118387" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-118387"><a href="https://www.iamcountryside.com/giveaways/">Giveaways</a></li>
+</ul>
+</li>
+<li id="menu-item-117825" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-117825"><a href="https://www.iamcountryside.com/all-membership/">Subscribe</a></li>
+<li id="menu-item-117046" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-117046"><a href="https://shop.iamcountryside.com/">Shop</a></li>
+<li id="menu-item-118105" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-118105"><a href="#">Web Stories</a>
+<ul class="sub-menu">
+	<li id="menu-item-118106" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-118106"><a href="http://iamcountryside.com/web-stories/kunekune-pigs">KuneKune Pigs</a></li>
+	<li id="menu-item-118285" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-118285"><a href="https://www.iamcountryside.com/web-stories/sustainable-rose-care">Sustainable Roses</a></li>
+	<li id="menu-item-118559" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-118559"><a href="https://www.iamcountryside.com/web-stories/picking-the-best-tractor-for-small-farms/">Tractors for Small Farms</a></li>
+</ul>
+</li>
+</ul></div>                           </nav>
+                        </div>
+
+                        <div class="col-sm-4">
+                           <div class="input-group custom-search border-0 mtop-4">
+                              <form action="https://www.iamcountryside.com/" role="search" method="get" class="main_search-form">
+                                 <div class="input-group-prependsearch">
+                                                                        <select class="searchcate" name="category">
+                                       <option value="">All</option>
+                                                                                 <option value="2791" >Book Reviews</option>
+                                                                                                                           <option value="24" >Canning &amp; Kitchen</option>
+                                                                                                                           <option value="26" >Cattle</option>
+                                                                                                                           <option value="25" >Fences, Sheds &amp; Barns</option>
+                                                                                                                           <option value="30" >Giveaways</option>
+                                                                                                                           <option value="22" >Growing</option>
+                                                                                                                           <option value="2807" >Holiday</option>
+                                                                                                                           <option value="23" >Homesteading</option>
+                                                                                                                           <option value="2804" >Horses-Donkeys</option>
+                                                                                                                           <option value="2605" >Partner Perks</option>
+                                                                                                                           <option value="9" >Pigs</option>
+                                                                                                                           <option value="2805" >Rabbits</option>
+                                                                                                                           <option value="2806" >Recipes</option>
+                                                                                                                           <option value="27" >Self-Reliance</option>
+                                                                                                                           <option value="28" >Sheep</option>
+                                                                                                                           <option value="21" >Soapmaking</option>
+                                                                                       <option value="2606" >&nbsp;&nbsp;&nbsp;Soapmaking Ask the Expert</option>
+                                                                                                                           <option value="29" >Tractors &amp; Farm Equipment</option>
+                                                                                                                           <option value="1" >Uncategorized</option>
+                                                                                                                     </select>
+                                 </div>
+
+                                 <input type="text" name="s" value="" class="form-control custom-search border-0 m-0 br-0" aria-label="Text input with dropdown button" placeholder="Search ...">
+                                 <input type="hidden" name="post_type" value="post" />
+                                 <button class="btn custom-search border-0 px-3 " type="submit"><i class="fa fa-search"></i></button>
+                              </form>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+
+               <div class="container-fluid header-bg2 ">
+                  <div class="container ">
+                     <div class="row ">
+                        <div id="submenu_containders_block" class="col-12 menu2"><ul id="sub-submenu-cls-sec" class="submenu_cls_sec"><li id="menu-item-50" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-50"><a href="https://www.iamcountryside.com/countryside-member/">MEMBERS ONLY</a></li>
+<li id="menu-item-19096" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-19096"><a href="https://www.iamcountryside.com/issues/">Magazine</a></li>
+<li id="menu-item-117053" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-117053"><a href="https://simplecirc.com/subscriber_login/countryside/">Manage My Account</a></li>
+<li id="menu-item-93828" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-93828"><a href="https://www.iamcountryside.com/homesteading/how-to-connect-with-our-experts/">Experts on Staff</a></li>
+<li id="menu-item-20429" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-20429"><a href="https://www.iamcountryside.com/homesteading/countryside-tutorials/">Tutorials</a></li>
+<li id="menu-item-117048" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-117048"><a href="https://www.iamcountryside.com/renew/">Renew Your Subscription</a></li>
+<li id="menu-item-117601" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-117601"><a href="https://www.iamcountryside.com/partner-perks/countryside-free-shipping/">Free Shipping</a></li>
+</ul></div>                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </header>
+
+      <section>
+         <div class="container">
+            <div class="row ">
+                                 <div class="col-12 text-center my-4 ">
+                     <div id="countryside_ad_widget-5" class="widget_countryside_ad_widget"><script>
+      window.googletag = window.googletag || {cmd: []};
+      googletag.cmd.push(function() {
+        googletag.defineSlot('/5195/FPC_CSY', [[728,90],[320,50]], 'leaderboard-top-1').defineSizeMapping( googletag.sizeMapping().addSize([0,0], [[320,50]]).addSize([768,0], [[728,90]]).build() ).addService(googletag.pubads());
+        // googletag.pubads().setTargeting('position', 3) // TODO
+        // googletag.pubads().setTargeting('slot', 'ad-big-box3'); // TODO
+        googletag.pubads().setTargeting('UrlPath', window.location.pathname);
+        googletag.pubads().enableSingleRequest();
+        googletag.pubads().collapseEmptyDivs();
+        googletag.enableServices();
+      });
+    </script>
+    <div class="text-center dfp-ad leaderboard-top-1" id="leaderboard-top-1">
+      <script>
+        googletag.cmd.push(function() { googletag.display('leaderboard-top-1'); });
+      </script>
+    </div></div>                  </div>
+               
+               <!--div class="col-12 text-center my-4 "><img width="892" height="91" class="mw-100" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20892%2091'%3E%3C/svg%3E" data-lazy-src="https://cdn.iamcountryside.com/wp-content/themes/CountrySide/images/add1.jpg"><noscript><img width="892" height="91" class="mw-100" src="https://cdn.iamcountryside.com/wp-content/themes/CountrySide/images/add1.jpg"></noscript></div--><div class="col-lg-8 col-md-12 col-sm-12">
+		<div class="blog-list">
+    	<div class="row">
+				
+	<article id="post-4807" class="col-md-12 post-4807 post type-post status-publish format-standard has-post-thumbnail hentry category-cattle tag-beef-cattle tag-cattle-breeds tag-dairy-cattle">
+		<div class="title"><h1 class="entry-titles">Raising Highland Cattle for Beef</h1></div>			<h2 class="subheadlines">Here are Some Interesting Highland Cattle Facts </h2>
+				
+				<link  rel="stylesheet"  href="https://cdn.iamcountryside.com/wp-content/plugins/itf-social-share-button/themes/theme9/style.css" ><div id="wp-share-button-4807" class="wp-share-button theme9"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://www.iamcountryside.com/cattle/raising-highland-cattle-for-beef/" post-id="4807" class="share-button share-button-4807 facebook" id="facebook" ><span class="button-icon"><i class="fa fa-facebook-f"></i></span><span class="button-name">Facebook</span><span class="button-count">27</span></a><a target="_blank" href="https://twitter.com/intent/tweet?url=https://www.iamcountryside.com/cattle/raising-highland-cattle-for-beef/&text=Raising Highland Cattle for Beef" post-id="4807" class="share-button share-button-4807 twitter" id="twitter" ><span class="button-icon"><i class="fa fa-twitter"></i></span><span class="button-name">Twitter</span><span class="button-count">4</span></a><a target="_blank" href="https://www.linkedin.com/shareArticle?url=https://www.iamcountryside.com/cattle/raising-highland-cattle-for-beef/&title=Raising Highland Cattle for Beef&summary=&source=" post-id="4807" class="share-button share-button-4807 linkedin" id="linkedin" ><span class="button-icon"><i class="fa fa-linkedin"></i></span><span class="button-name">Linkedin</span><span class="button-count">5</span></a><a target="_blank" href="mailto:?subject=Raising Highland Cattle for Beef&body=https://www.iamcountryside.com/cattle/raising-highland-cattle-for-beef/" post-id="4807" class="share-button share-button-4807 email" id="email" ><span class="button-icon"><i class="fa fa-envelope"></i></span><span class="button-name">Email</span><span class="button-count">39</span></a><a target="_blank" href="javascript:window.print()" post-id="4807" class="share-button share-button-4807 printlink" id="printlink" ><span class="button-icon"><i class="fa fa-print"></i></span><span class="button-name">Print</span><span class="button-count">47</span></a><a target="_blank" href="http://www.reddit.com/submit?title=Raising Highland Cattle for Beef&url=https://www.iamcountryside.com/cattle/raising-highland-cattle-for-beef/" post-id="4807" class="share-button share-button-4807 reddit" id="reddit" ><span class="button-icon"><i class="fa fa-reddit-alien"></i></span><span class="button-name">Reddit</span><span class="button-count">3</span></a><div class="wp-share-button-popup wp-share-button-popup-4807"><div class="popup-buttons"><span class="close">X</span><a target="_blank" href="http://www.stumbleupon.com/submit?url=https://www.iamcountryside.com/cattle/raising-highland-cattle-for-beef/&title=Raising Highland Cattle for Beef" post-id="4807" class="share-button share-button-4807 stumbleupon" id="stumbleupon" ><span class="button-icon"><i class="fa fa-stumbleupon"></i></i>
+</span><span class="button-name">Stumbleupon</span><span class="button-count">0</span></a></div></div><script type="text/javascript" async defer src="//assets.pinterest.com/js/pinit.js"></script>
+		<style>
+			.pinterest-button a {
+				border-radius: 0 !important;
+			}
+			.wp-share-button.theme9 .share-button {
+				padding: 4px 8px 3px;
+			}
+		</style>
+		<span class="pinterest-button">
+			<a data-pin-do="buttonPin" href="https://www.pinterest.com/pin/create/button/?url=https://www.iamcountryside.com/cattle/raising-highland-cattle-for-beef/&description=Raising Highland Cattle for Beef" data-pin-tall="true" data-pin-height="28" style="border-radius: 0;"></a>
+		</span></div>        <style type="text/css">.wp-share-button{}
+.wp-share-button a{}
+</style>
+        
+		<div class="post_meta_block"><span class="posted-on"><span class="screen-reader-text"></span><a href="https://www.iamcountryside.com/cattle/raising-highland-cattle-for-beef/" rel="bookmark"><time class="entry-date published" datetime="2021-05-10T19:46:00-06:00">May 10, 2021</time></a></span><span class="byline"><span class="author vcard"><span class="screen-reader-text">Author :  </span><a class="url fn n" href="https://www.iamcountryside.com/author/countrysidemagcontributor/">Countryside Magazine Contributor</a></span></span><span class="cat-links"><span class="screen-reader-text">Categories :  </span><a href="https://www.iamcountryside.com/cattle/" rel="category tag">Cattle</a></span></div>
+
+					<div class="blog_img_full fullsonser">		
+				<img width="724" height="483" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20724%20483'%3E%3C/svg%3E" class="img-responsive wp-post-image" alt="Raising Highland Cattle for Beef" data-lazy-srcset="https://cdn.iamcountryside.com/wp-content/uploads/2019/02/GettyImages-845355220.jpg 724w, https://cdn.iamcountryside.com/wp-content/uploads/2019/02/GettyImages-845355220-400x267.jpg 400w" data-lazy-sizes="(max-width: 724px) 100vw, 724px" data-lazy-src="https://cdn.iamcountryside.com/wp-content/uploads/2019/02/GettyImages-845355220.jpg" /><noscript><img width="724" height="483" src="https://cdn.iamcountryside.com/wp-content/uploads/2019/02/GettyImages-845355220.jpg" class="img-responsive wp-post-image" alt="Raising Highland Cattle for Beef" srcset="https://cdn.iamcountryside.com/wp-content/uploads/2019/02/GettyImages-845355220.jpg 724w, https://cdn.iamcountryside.com/wp-content/uploads/2019/02/GettyImages-845355220-400x267.jpg 400w" sizes="(max-width: 724px) 100vw, 724px" /></noscript>			</div><!-- .post-thumbnail -->
+					
+		<div class="content-details">
+			<button class="simplefavorite-button" data-postid="4807" data-siteid="1" data-groupid="1" data-favoritecount="64" style="box-shadow:none;-webkit-box-shadow:none;-moz-box-shadow:none;background-color:#689155;"><i class="fa fa-plus-square-o"></i> Add to Favorites </button><div id="opi_article_content"><p style="color: #689155"><span class="span-reading-time rt-reading-time"><span class="rt-label rt-prefix">Reading Time:</span> <span class="rt-time"> 5</span> <span class="rt-label rt-postfix">minutes</span></span></p>
+<p><em>By Gloria Asmussen</em>&nbsp;&#8211; “As cute as they look, that is as good as they taste.” That statement is something I live by. Raising Highland cattle since 1990 has not only been a passion but a way of life. Many people don’t know what the Highland breed of cattle is or that they originate from Scotland. I have been asked, “How can you eat them? They are so cute.” Well, they are not just a cute face or a lawn/ pasture ornament;&nbsp;we are raising Highland cattle as a true meat&nbsp;animal.</p>
+<p>Coming from a dairy farm in my younger years, all I ever knew was how to milk a cow, even though we did butcher Holstein steers each year for our family beef. After I left home I said I would never raise dairy animals, because you have to be there to milk them 24/7. Twenty years later, when I met my husband and we purchased a 250-acre farm in Wisconsin, we decided to purchase animals. My reply was, “No dairy cattle.”</p>
+<div class="ads_blocks">
+						<div class="ads_block_content"><div class="ads_contents_block"><h1 class="headerlink"><a target="_blank" href=""  ></a></h1><div class="adconetnst"><div id="opi_article_content"><!-- This site is converting visitors into subscribers and customers with OptinMonster - https://optinmonster.com :: Campaign Title: CTY Free Guide - Cattle Breeds -->
+<div id="om-xl5owlkzozs3frzlukmx-holder"></div>
+<script>(function(d,u,ac){var s=d.createElement('script');s.type='text/javascript';s.src='https://a.omappapi.com/app/js/api.min.js';s.async=true;s.dataset.user=u;s.dataset.campaign=ac;d.getElementsByTagName('head')[0].appendChild(s);})(document,40616,'xl5owlkzozs3frzlukmx');</script>
+<!-- / OptinMonster -->
+</div></div></div></div></div>
+<p>If you are new to raising cattle, you should begin with <a href="https://www.iamcountryside.com/cattle/start-a-cattle-farm/" target="_blank" rel="noopener noreferrer">how to start a cattle farm</a> and <a href="https://www.iamcountryside.com/cattle/beef-cattle-farming/" target="_blank" rel="noopener noreferrer">cattle farming for beginners</a>.&nbsp;After researching&nbsp;<a href="https://www.iamcountryside.com/cattle/dairy-and-beef-cattle-breeds/" target="_blank" rel="noopener noreferrer">beef cattle breeds</a>,&nbsp;I knew I wanted&nbsp;something different, not the norm. We came upon the Scottish Highland breed. That was in 1989. After renting out our cropland, we just had 40 acres left for our farming endeavor. So we purchased two yearling Scottish Highland heifers in the fall of 1990 and the following spring we purchased our first small fold of five Highlands, including the bull.</p>
+<p><img class="wp-image-8941" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20629%20420'%3E%3C/svg%3E" alt="raising-highland-cattle" width="629" height="420" data-lazy-srcset="https://cdn.iamcountryside.com/wp-content/uploads/2019/02/Highland-Cattle-1026x684-1024x683.jpeg 1024w, https://cdn.iamcountryside.com/wp-content/uploads/2019/02/Highland-Cattle-1026x684-1024x683-400x267.jpeg 400w, https://cdn.iamcountryside.com/wp-content/uploads/2019/02/Highland-Cattle-1026x684-1024x683-768x512.jpeg 768w" data-lazy-sizes="(max-width: 629px) 100vw, 629px" data-lazy-src="https://cdn.iamcountryside.com/wp-content/uploads/2019/02/Highland-Cattle-1026x684-1024x683.jpeg" /><noscript><img class="wp-image-8941" src="https://cdn.iamcountryside.com/wp-content/uploads/2019/02/Highland-Cattle-1026x684-1024x683.jpeg" alt="raising-highland-cattle" width="629" height="420" srcset="https://cdn.iamcountryside.com/wp-content/uploads/2019/02/Highland-Cattle-1026x684-1024x683.jpeg 1024w, https://cdn.iamcountryside.com/wp-content/uploads/2019/02/Highland-Cattle-1026x684-1024x683-400x267.jpeg 400w, https://cdn.iamcountryside.com/wp-content/uploads/2019/02/Highland-Cattle-1026x684-1024x683-768x512.jpeg 768w" sizes="(max-width: 629px) 100vw, 629px" /></noscript></p>
+<p>We found that Highland cattle&nbsp;were very docile, easy to handle and really great foragers. In the spring the older animals would actually rub down the small birch trees we had in the pasture and eat the leaves and any other green brush they could find, especially cedar samplings. They also enjoyed the grass pasture, but they didn’t need the feed that our neighbors were feeding their animals. During the cold harsh Wisconsin winters, they needed hay, minerals, and protein. But they didn’t want to go into the barn; instead, they would stand against the outside of the barn for a windbreak or go up to the woods.</p>
+<p>It was when we moved to Missouri and took the Highlands with us that we saw how versatile the breed is. They acclimated to the hot summer temperatures by shedding their winter hair coat in early spring. By June their hair was short like most other breeds. Some bloodlines would keep more hair on than others and the calves would usually have more hair also. They keep their dousan (forelock) and the coarse spin hair. As long as they had shade and ponds to stand in, they grazed early mornings and late evenings during the hot summer months and they thrived very well. You will find Highlands in many southern states. There is a regional Highland Association that promotes and educates people on the breed. A free information packet is available to anyone. You can find the website at <a href="http://www.heartlandhighlandcattleassociation.org" target="_blank" rel="noopener noreferrer">heartlandhighlandcattleassociation.org</a>. The Heartland Highland Cattle Association also has an <a href="http://www.highlandcattleauction.com/" target="_blank" rel="noopener noreferrer">annual raising Highland cattle auction sale</a>.</p>
+<p>It was in 2000 that we&nbsp;stopped raising Highland cattle and began&nbsp;selling pasture-finished beef to friends and neighbors who wanted to purchase some after tasting it. We started to niche market the sale of our beef at different venues and agricultural events as well provided Highland beef to the health food store in our county. That is when we found people wanted to know more about the nutritional facts of raising Highland cattle. After researching it more we found information compiled years ago from AHCA, Blue Ox Farms, M.A.F.F. and the Scottish agricultural college that the Highland beef is lower in cholesterol than turkey, salmon, pork and shrimp, and lower in fat than chicken, pork loin, and all cuts of commercial beef, and that Highland beef is higher in protein than other beef and even chicken breast. Currently, there is a Quality Highland Beef study underway at the University of Missouri in Columbia, Missouri, by Dr. Bryon Wiegand, Associate Professor of Meat Science. The study is not complete yet, but the preliminary results show a trend that rises to the top is the tenderness of Highland beef. There are very few “tough” samples in the entire data set. These results seem true regardless of the production system. Tenderness traits are moderately heritable and tend to track with cattle of certain genetic origin, with <em>Bos taurus</em> (temperate climate) cattle having a greater propensity for tender meat compared with <em>Bos indicus </em>(tropical climate or zebu) cattle. There is also evidence in the literature that aging time postmortem can greatly contribute to tenderness, especially past nine days in the cooler for dry aged intact carcass beef. We also find a positive relationship between increased marbling and increased tenderness. The Highland beef that has been tested seems to buck this last trend in that the fat percentage in most samples is low compared to the industry indicating less marbling, but still producing a tender product. This could prove to be a unique marketing tool for any Highland breeder selling their beef.</p>
+<p><img class="wp-image-8942" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20245%20214'%3E%3C/svg%3E" alt="raising-highland-cattle" width="245" height="214" data-lazy-src="https://cdn.iamcountryside.com/wp-content/uploads/2019/02/HighlandCattle21.jpg"><noscript><img class="wp-image-8942" src="https://cdn.iamcountryside.com/wp-content/uploads/2019/02/HighlandCattle21.jpg" alt="raising-highland-cattle" width="245" height="214"></noscript></p>
+<p>I have found that raising Highland cattle was&nbsp;cheaper, especially for beef, as they don’t require the finishing that many people do with their beef. I make sure they have enough minerals and protein available for them to eat especially in the winter when they are eating hay. During the summer they don’t receive minimal protein, but still, have loose mineral available. The beef has a vein marbling throughout the ribeye steaks and that also helps with the tenderness. My grass-finished beef is very lean. To fry a hamburger, you may need to put some olive oil in the pan so the beef doesn’t stick to the pan. I use a slow cooker for my roasts, as they are very tender and tasty cooked that way. For my sirloin tip roasts, I use a rub and then wrap them with tin foil and place them in the oven at 250°F and roast to medium rare. Slice the roast thinly and you have a delicious French dip with au jus.</p>
+<p><img class="wp-image-8943" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20500%20800'%3E%3C/svg%3E" alt="Raising Highland Cattle" width="500" height="800" data-lazy-srcset="https://cdn.iamcountryside.com/wp-content/uploads/2019/02/RaisingHighlandCattle-500x800.jpg 500w, https://cdn.iamcountryside.com/wp-content/uploads/2019/02/RaisingHighlandCattle-500x800-188x300.jpg 188w" data-lazy-sizes="(max-width: 500px) 100vw, 500px" data-lazy-src="https://cdn.iamcountryside.com/wp-content/uploads/2019/02/RaisingHighlandCattle-500x800.jpg" /><noscript><img class="wp-image-8943" src="https://cdn.iamcountryside.com/wp-content/uploads/2019/02/RaisingHighlandCattle-500x800.jpg" alt="Raising Highland Cattle" width="500" height="800" srcset="https://cdn.iamcountryside.com/wp-content/uploads/2019/02/RaisingHighlandCattle-500x800.jpg 500w, https://cdn.iamcountryside.com/wp-content/uploads/2019/02/RaisingHighlandCattle-500x800-188x300.jpg 188w" sizes="(max-width: 500px) 100vw, 500px" /></noscript></p>
+<p>Over the past 15 years, I have found more and more health-conscious people who want to purchase natural finished beef, with no additives, no GMO, no grain and no steroids. The customer wants beef that is humanely raised and is out in the pasture leisurely grazing to their heart’s content. So as I began this article, I will end it. “As cute as they look, that is as good as they taste.” I hope this inspires you to start raising Highland cattle.</p>
+<p><em>Originally published in Countryside 2015 and regularly vetted for accuracy.&nbsp;Gloria&nbsp;is co-founder and Secretary of the Heartland&nbsp;Highland Cattle Association.</em></p>
+<link  rel="stylesheet"  href="https://cdn.iamcountryside.com/wp-content/plugins/itf-social-share-button/themes/theme9/style.css" ><div id="wp-share-button-4807" class="wp-share-button theme9"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://www.iamcountryside.com/cattle/raising-highland-cattle-for-beef/" post-id="4807" class="share-button share-button-4807 facebook" id="facebook" ><span class="button-icon"><i class="fa fa-facebook-f"></i></span><span class="button-name">Facebook</span><span class="button-count">27</span></a><a target="_blank" href="https://twitter.com/intent/tweet?url=https://www.iamcountryside.com/cattle/raising-highland-cattle-for-beef/&text=Raising Highland Cattle for Beef" post-id="4807" class="share-button share-button-4807 twitter" id="twitter" ><span class="button-icon"><i class="fa fa-twitter"></i></span><span class="button-name">Twitter</span><span class="button-count">4</span></a><a target="_blank" href="https://www.linkedin.com/shareArticle?url=https://www.iamcountryside.com/cattle/raising-highland-cattle-for-beef/&title=Raising Highland Cattle for Beef&summary=&source=" post-id="4807" class="share-button share-button-4807 linkedin" id="linkedin" ><span class="button-icon"><i class="fa fa-linkedin"></i></span><span class="button-name">Linkedin</span><span class="button-count">5</span></a><a target="_blank" href="mailto:?subject=Raising Highland Cattle for Beef&body=https://www.iamcountryside.com/cattle/raising-highland-cattle-for-beef/" post-id="4807" class="share-button share-button-4807 email" id="email" ><span class="button-icon"><i class="fa fa-envelope"></i></span><span class="button-name">Email</span><span class="button-count">39</span></a><a target="_blank" href="javascript:window.print()" post-id="4807" class="share-button share-button-4807 printlink" id="printlink" ><span class="button-icon"><i class="fa fa-print"></i></span><span class="button-name">Print</span><span class="button-count">47</span></a><a target="_blank" href="http://www.reddit.com/submit?title=Raising Highland Cattle for Beef&url=https://www.iamcountryside.com/cattle/raising-highland-cattle-for-beef/" post-id="4807" class="share-button share-button-4807 reddit" id="reddit" ><span class="button-icon"><i class="fa fa-reddit-alien"></i></span><span class="button-name">Reddit</span><span class="button-count">3</span></a><div class="wp-share-button-popup wp-share-button-popup-4807"><div class="popup-buttons"><span class="close">X</span><a target="_blank" href="http://www.stumbleupon.com/submit?url=https://www.iamcountryside.com/cattle/raising-highland-cattle-for-beef/&title=Raising Highland Cattle for Beef" post-id="4807" class="share-button share-button-4807 stumbleupon" id="stumbleupon" ><span class="button-icon"><i class="fa fa-stumbleupon"></i></i>
+</span><span class="button-name">Stumbleupon</span><span class="button-count">0</span></a></div></div><script type="text/javascript" async defer src="//assets.pinterest.com/js/pinit.js"></script>
+		<style>
+			.pinterest-button a {
+				border-radius: 0 !important;
+			}
+			.wp-share-button.theme9 .share-button {
+				padding: 4px 8px 3px;
+			}
+		</style>
+		<span class="pinterest-button">
+			<a data-pin-do="buttonPin" href="https://www.pinterest.com/pin/create/button/?url=https://www.iamcountryside.com/cattle/raising-highland-cattle-for-beef/&description=Raising Highland Cattle for Beef" data-pin-tall="true" data-pin-height="28" style="border-radius: 0;"></a>
+		</span></div>        <style type="text/css">.wp-share-button{}
+.wp-share-button a{}
+</style>
+        </div><div id="div-gpt-ad-1663356543829-0" data-opi="article_ad" style="text-align: center; margin: 10px auto;"><script>googletag.cmd.push(function() { googletag.display('div-gpt-ad-1663356543829-0'); });</script></div>		</div><!-- .entry-content -->
+		<div class="entry-footer">
+			<span class="cat-links"><span class="screen-reader-text">Categories :  </span><a href="https://www.iamcountryside.com/cattle/" rel="category tag">Cattle</a></span><span class="tags-links"><span class="screen-reader-text">Tags :  </span><a href="https://www.iamcountryside.com/tag/beef-cattle/" rel="tag">beef-cattle</a><a href="https://www.iamcountryside.com/tag/cattle-breeds/" rel="tag">cattle-breeds</a><a href="https://www.iamcountryside.com/tag/dairy-cattle/" rel="tag">dairy-cattle</a></span>					</div><!-- .entry-footer -->
+	</article><!-- #post-## -->
+
+<!-- relpost-thumb-wrapper --><div class="relpost-thumb-wrapper"><!-- filter-class --><div class=""><!-- related_posts_thumbnails --><div class="row"><div class="col-md-4" ><a href="https://www.iamcountryside.com/growing/a-guide-to-diatomaceous-earth-uses/" ><img class="relpost-post-image" alt="A Guide to Diatomaceous Earth Uses" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20326%20221'%3E%3C/svg%3E" width="326" height="221" data-lazy-src="https://cdn.iamcountryside.com/wp-content/uploads/2019/02/iStock_000023236215_Small-326x221.jpg" /><noscript><img class="relpost-post-image" alt="A Guide to Diatomaceous Earth Uses" src="https://cdn.iamcountryside.com/wp-content/uploads/2019/02/iStock_000023236215_Small-326x221.jpg" width="326" height="221" /></noscript></a><a href="https://www.iamcountryside.com/growing/a-guide-to-diatomaceous-earth-uses/" class="relpost_content"><span class="rpth_list_content">A Guide to Diatomaceous Earth Uses</span></a></div><div class="col-md-4" ><a href="https://www.iamcountryside.com/cattle/beef-cattle-farming/" ><img class="relpost-post-image" alt="Beef Cattle Farming for Beginners" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20326%20221'%3E%3C/svg%3E" width="326" height="221" data-lazy-src="https://cdn.iamcountryside.com/wp-content/uploads/2019/02/cattle-farming-for-beginners-e1448821087842-326x221.jpg" /><noscript><img class="relpost-post-image" alt="Beef Cattle Farming for Beginners" src="https://cdn.iamcountryside.com/wp-content/uploads/2019/02/cattle-farming-for-beginners-e1448821087842-326x221.jpg" width="326" height="221" /></noscript></a><a href="https://www.iamcountryside.com/cattle/beef-cattle-farming/" class="relpost_content"><span class="rpth_list_content">Beef Cattle Farming for Beginners</span></a></div><div class="col-md-4" ><a href="https://www.iamcountryside.com/cattle/adventures-with-miniature-cattle/" ><img class="relpost-post-image" alt="Adventures with Miniature Cattle" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20326%20221'%3E%3C/svg%3E" width="326" height="221" data-lazy-src="https://cdn.iamcountryside.com/wp-content/uploads/2019/02/ThinkstockPhotos-476031357-326x221.jpg" /><noscript><img class="relpost-post-image" alt="Adventures with Miniature Cattle" src="https://cdn.iamcountryside.com/wp-content/uploads/2019/02/ThinkstockPhotos-476031357-326x221.jpg" width="326" height="221" /></noscript></a><a href="https://www.iamcountryside.com/cattle/adventures-with-miniature-cattle/" class="relpost_content"><span class="rpth_list_content">Adventures with Miniature Cattle</span></a></div><div class="col-md-4" ><a href="https://www.iamcountryside.com/cattle/jersey-cow-milk-production/" ><img class="relpost-post-image" alt="The Jersey Cow: Milk Production for the Small Homestead" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20326%20221'%3E%3C/svg%3E" width="326" height="221" data-lazy-src="https://cdn.iamcountryside.com/wp-content/uploads/2019/02/iStock_000001687377_Small-326x221.jpg" /><noscript><img class="relpost-post-image" alt="The Jersey Cow: Milk Production for the Small Homestead" src="https://cdn.iamcountryside.com/wp-content/uploads/2019/02/iStock_000001687377_Small-326x221.jpg" width="326" height="221" /></noscript></a><a href="https://www.iamcountryside.com/cattle/jersey-cow-milk-production/" class="relpost_content"><span class="rpth_list_content">The Jersey Cow: Milk Production for the Small Homestead</span></a></div><div class="col-md-4" ><a href="https://www.iamcountryside.com/cattle/open-range-ranching/" ><img class="relpost-post-image" alt="How Open Range Ranching Applies to Non-Ranchers" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20326%20221'%3E%3C/svg%3E" width="326" height="221" data-lazy-src="https://cdn.iamcountryside.com/wp-content/uploads/2019/02/Open-Range-e1461941789446-326x221.jpg" /><noscript><img class="relpost-post-image" alt="How Open Range Ranching Applies to Non-Ranchers" src="https://cdn.iamcountryside.com/wp-content/uploads/2019/02/Open-Range-e1461941789446-326x221.jpg" width="326" height="221" /></noscript></a><a href="https://www.iamcountryside.com/cattle/open-range-ranching/" class="relpost_content"><span class="rpth_list_content">How Open Range Ranching Applies to Non-Ranchers</span></a></div><div class="col-md-4" ><a href="https://www.iamcountryside.com/cattle/calving-signs-assist/" ><img class="relpost-post-image" alt="Calving Signs - Being Ready to Assist" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20326%20221'%3E%3C/svg%3E" width="326" height="221" data-lazy-src="https://cdn.iamcountryside.com/wp-content/uploads/2019/02/DSC_0518-e1458575835644-326x221.jpg" /><noscript><img class="relpost-post-image" alt="Calving Signs - Being Ready to Assist" src="https://cdn.iamcountryside.com/wp-content/uploads/2019/02/DSC_0518-e1458575835644-326x221.jpg" width="326" height="221" /></noscript></a><a href="https://www.iamcountryside.com/cattle/calving-signs-assist/" class="relpost_content"><span class="rpth_list_content">Calving Signs - Being Ready to Assist</span></a></div></div><!-- close related_posts_thumbnails --><div style="clear: both"></div></div><!-- close filter class --></div><!-- close relpost-thumb-wrapper --><div class="col-md-12 row">
+	<div id="comments" class="post-comment section-comments comments-area">
+
+		
+			</div>
+</div>
+<div class="col-md-12">
+	<div class="post-comment">
+			<div id="respond" class="comment-respond">
+		<h3 id="reply-title" class="comment-reply-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="/cattle/raising-highland-cattle-for-beef/#respond" style="display:none;">Cancel reply</a></small></h3><form action="https://www.iamcountryside.com/wp-comments-post.php" method="post" id="commentform" class="comment-form" novalidate><p class="comment-notes"><span id="email-notes">Your email address will not be published.</span> Required fields are marked <span class="required">*</span></p><p class="comment-form-comment"><label for="comment">Comment</label> <textarea id="comment" name="comment" cols="45" rows="8" maxlength="65525" required="required"></textarea></p><p class="comment-form-author"><label for="author">Name <span class="required">*</span></label> <input id="author" name="author" type="text" value="" size="30" maxlength="245" required='required' /></p>
+<p class="comment-form-email"><label for="email">Email <span class="required">*</span></label> <input id="email" name="email" type="email" value="" size="30" maxlength="100" aria-describedby="email-notes" required='required' /></p>
+<p class="comment-form-url"><label for="url">Website</label> <input id="url" name="url" type="url" value="" size="30" maxlength="200" /></p>
+<p class="comment-form-comment-subscribe"><label for="cren_subscribe_to_comment"><input id="cren_subscribe_to_comment" name="cren_subscribe_to_comment" type="checkbox" value="on" checked>Notify me via e-mail if anyone answers my comment.</label></p>
+<p class="form-submit"><input name="submit" type="submit" id="submit" class="submit" value="Post Comment" /> <input type='hidden' name='comment_post_ID' value='4807' id='comment_post_ID' />
+<input type='hidden' name='comment_parent' id='comment_parent' value='0' />
+</p><p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="280f5c8f22" /></p><input type="hidden" id="ak_js" name="ak_js" value="16"/><textarea name="ak_hp_textarea" cols="45" rows="8" maxlength="100" style="display: none !important;"></textarea></form>	</div><!-- #respond -->
+	
+	</div><!-- .comments-area -->
+</div>
+		</div>
+	</div>
+	</div>
+<!--<div class="col-md-4">-->
+<div class="col-lg-4 col-12">
+	<div class="card rounded-0 border-0  mb-3">
+		<div class="card-body">
+		      <div id="countryside_ad_widget-2" class="sidebar widget widget_countryside_ad_widget"><script>
+      window.googletag = window.googletag || {cmd: []};
+      googletag.cmd.push(function() {
+        googletag.defineSlot('/5195/FPC_CSY', [[300,250]], 'big-box-1').addService(googletag.pubads());
+        // googletag.pubads().setTargeting('position', 3) // TODO
+        // googletag.pubads().setTargeting('slot', 'ad-big-box3'); // TODO
+        googletag.pubads().setTargeting('UrlPath', window.location.pathname);
+        googletag.pubads().enableSingleRequest();
+        googletag.pubads().collapseEmptyDivs();
+        googletag.enableServices();
+      });
+    </script>
+    <div class="text-center dfp-ad big-box-1" id="big-box-1">
+      <script>
+        googletag.cmd.push(function() { googletag.display('big-box-1'); });
+      </script>
+    </div></div><div id="countryside_ad_widget-3" class="sidebar widget widget_countryside_ad_widget"><script>
+      window.googletag = window.googletag || {cmd: []};
+      googletag.cmd.push(function() {
+        googletag.defineSlot('/5195/FPC_CSY', [[300,250]], 'big-box-2').addService(googletag.pubads());
+        // googletag.pubads().setTargeting('position', 3) // TODO
+        // googletag.pubads().setTargeting('slot', 'ad-big-box3'); // TODO
+        googletag.pubads().setTargeting('UrlPath', window.location.pathname);
+        googletag.pubads().enableSingleRequest();
+        googletag.pubads().collapseEmptyDivs();
+        googletag.enableServices();
+      });
+    </script>
+    <div class="text-center dfp-ad big-box-2" id="big-box-2">
+      <script>
+        googletag.cmd.push(function() { googletag.display('big-box-2'); });
+      </script>
+    </div></div><div id="countryside_ad_widget-4" class="sidebar widget widget_countryside_ad_widget"><script>
+      window.googletag = window.googletag || {cmd: []};
+      googletag.cmd.push(function() {
+        googletag.defineSlot('/5195/FPC_CSY', [[300,250]], 'big-box-3').addService(googletag.pubads());
+        // googletag.pubads().setTargeting('position', 3) // TODO
+        // googletag.pubads().setTargeting('slot', 'ad-big-box3'); // TODO
+        googletag.pubads().setTargeting('UrlPath', window.location.pathname);
+        googletag.pubads().enableSingleRequest();
+        googletag.pubads().collapseEmptyDivs();
+        googletag.enableServices();
+      });
+    </script>
+    <div class="text-center dfp-ad big-box-3" id="big-box-3">
+      <script>
+        googletag.cmd.push(function() { googletag.display('big-box-3'); });
+      </script>
+    </div></div>		</div>
+	</div>
+</div>
+</div>
+</div>
+</section>
+
+<div class="clearfix"></div>
+<footer>
+  <div class="container-fluid  footer-text footer-bg mt-3 p-0">
+    <div class="container">
+      <div class="row  py-4">
+
+                  <div class=" col-md-12 footer-list widget_nav_menu" id="nav_menu-6"><div class="menu-footer-all-in-one-container"><ul id="menu-footer-all-in-one" class="menu"><li id="menu-item-104006" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-104006"><a href="https://www.iamcountryside.com/renewal/">Renew</a></li>
+<li id="menu-item-17617" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-17617"><a href="https://www.iamcountryside.com/our-countryside-story/">About Us</a></li>
+<li id="menu-item-16106" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-16106"><a href="https://www.iamcountryside.com/contact-us/">Contact Us</a></li>
+<li id="menu-item-15894" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-15894"><a href="https://www.iamcountryside.com/terms-of-use/">Terms of Use</a></li>
+<li id="menu-item-15850" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-15850"><a href="https://www.ogdenpubs.com/marketing-solutions/">Advertise</a></li>
+<li id="menu-item-15895" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-15895"><a href="https://www.iamcountryside.com/privacy-policy/">Privacy Policy</a></li>
+<li id="menu-item-78421" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-78421"><a href="https://www.iamcountryside.com/magazines/">Magazines</a></li>
+<li id="menu-item-15846" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-15846"><a href="https://www.iamcountryside.com/all-membership/">Subscribe</a></li>
+<li id="menu-item-104413" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-104413"><a href="http://iamcountryside.com/careers">Careers</a></li>
+</ul></div></div><div class="widget_text  col-md-12 footer-list widget_custom_html" id="custom_html-8"><div class="textwidget custom-html-widget"><ul class="list-inline socialMedia">
+            <li class="list-inline-item"> <a href="https://www.facebook.com/IAmCountryside/"><i class="fa fa-facebook-square"></i></a></li>
+	<!--
+ <li class="list-inline-item"><a href="#"><i class="fa fa-twitter-square"></i></a></li>
+<li class="list-inline-item"><a href="#"><i class="fa fa-linkedin"></i></a></li>
+<li class="list-inline-item"><a href="#"><i class="fa fa-google-plus-square"></i></a></li>
+	-->
+	<li class="list-inline-item"><a href="https://www.instagram.com/iamcountryside/"><i class="fa fa-instagram"></i></a></li>
+
+	<li class="list-inline-item"><a href="https://www.pinterest.com/iamcountryside/"><i class="fa fa-pinterest"></i></a></li>
+
+
+</ul></div></div><div class="widget_text  col-md-12 footer-list widget_custom_html" id="custom_html-12"><div class="textwidget custom-html-widget"><script>
+    var cpModal = new bootstrap.Modal(document.getElementById('cp-modal'),{
+      backdrop: 'static',
+      keyboard: false
+    });
+    cpModal.show();
+    jQuery('.content-details p').slice(2).hide(); // only show teaser for content
+    jQuery('.content-details .wp-block-button').hide();
+    </script><script type="text/javascript">
+document.addEventListener("DOMContentLoaded", function(event) {
+  var printlinks = document.querySelectorAll('.printlink'), i;
+  console.log("fixing printlinks", printlinks);
+  for (i = 0; i < printlinks.length; ++i) {
+    printlinks[i].target = "_self";
+  }
+});
+</script></div></div>        
+        <!--div class=" col-md-4 footer-list">
+          <h4 class="footer-head ">Keep in Touch</h4>
+          <ul class="list-inline socialMedia">
+            <li class="list-inline-item"> <a href="#"><i class="fa fa-facebook-square"></i></a></li>
+            <li class="list-inline-item"><a href="#"><i class="fa fa-twitter-square"></i></a></li>
+            <li class="list-inline-item"><a href="#"><i class="fa fa-linkedin"></i></a></li>
+            <li class="list-inline-item"><a href="#"><i class="fa fa-google-plus-square"></i></a></li>
+          </ul>
+
+          <div class="mt-4">
+            <div class="input-group">
+              <input  type="text" class="form-control rounded-0 text-small" id="validationCustomUsername" placeholder="Your Email" aria-describedby="inputGroupPrepend" required="">
+              <div class="input-group-prepend "> <span class="btn rounded-0  primary-bg rounded-right text-small" >Subscribe</span> </div>
+            </div>
+            <div class="mt-2 ">Register now to get updates on promotions and new products</div>
+          </div>
+
+        </div-->
+
+      </div>
+    </div>
+    <div class="py-3 text-center border-top">&copy; 2022, Countryside - All Rights Reserved</div>
+  </div>
+</footer>
+</div>
+
+    <script>
+    var cpModal = new bootstrap.Modal(document.getElementById('cp-modal'),{
+      backdrop: 'static',
+      keyboard: false
+    });
+    cpModal.show();
+    jQuery('.content-details p').slice(2).hide(); // only show teaser for content
+    jQuery('.content-details .wp-block-button').hide();
+    </script><!-- Instagram Feed JS -->
+<script type="text/javascript">
+var sbiajaxurl = "https://www.iamcountryside.com/wp-admin/admin-ajax.php";
+</script>
+
+<svg style="display: none">
+    <defs>
+        <symbol id="fa-bars" data-icon="bars" class="svg-inline--fa fa-bars fa-w-14 text-dark" role="img" xmlns="https://www.w3.org/2000/svg" viewBox="0 0 448 512">
+            <path fill="currentColor" d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z">
+            </path>
+        </symbol>
+
+        <symbol id="fa-search" data-icon="search" class="svg-inline--fa fa-search text-dark" role="img" xmlns="https://www.w3.org/2000/svg" viewBox="0 0 512 512">
+            <path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z">
+            </path>
+        </symbol>
+
+        <symbol id="fa-times" data-icon="times" class="svg-inline--fa fa-times fa-w-11 text-dark" role="img" xmlns="https://www.w3.org/2000/svg" viewBox="0 0 352 512">
+            <path fill="currentColor" d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z">
+            </path>
+        </symbol>
+    </defs>
+</svg><!-- This site is converting visitors into subscribers and customers with OptinMonster - https://optinmonster.com :: Campaign Title: CYS Sub Mobile B -->
+<script>(function(d,u,ac){var s=d.createElement('script');s.type='text/javascript';s.src='https://a.omappapi.com/app/js/api.min.js';s.async=true;s.dataset.user=u;s.dataset.campaign=ac;d.getElementsByTagName('head')[0].appendChild(s);})(document,40616,'jvgplds8m6ohwqx7cbz0');</script>
+<!-- / OptinMonster --><!-- This site is converting visitors into subscribers and customers with OptinMonster - https://optinmonster.com :: Campaign Title: CYS Sub Desktop D -->
+<script>(function(d,u,ac){var s=d.createElement('script');s.type='text/javascript';s.src='https://a.omappapi.com/app/js/api.min.js';s.async=true;s.dataset.user=u;s.dataset.campaign=ac;d.getElementsByTagName('head')[0].appendChild(s);})(document,40616,'mmdaemgz9okgn4k1ultv');</script>
+<!-- / OptinMonster --><!-- This site is converting visitors into subscribers and customers with OptinMonster - https://optinmonster.com :: Campaign Title: Sheep Guide Popup -->
+<script>(function(d,u,ac){var s=d.createElement('script');s.type='text/javascript';s.src='https://a.omappapi.com/app/js/api.min.js';s.async=true;s.dataset.user=u;s.dataset.campaign=ac;d.getElementsByTagName('head')[0].appendChild(s);})(document,40616,'qqgnghaiokuan9g5u6sf');</script>
+<!-- / OptinMonster --><div style="position:absolute;overflow:hidden;clip:rect(0 0 0 0);height:1px;width:1px;margin:-1px;padding:0;border:0"><div class="omapi-shortcode-helper">[class^="wpforms-"]</div><div class="omapi-shortcode-parsed omapi-encoded">[class^=&quot;wpforms-&quot;]</div></div><div style="position:absolute;overflow:hidden;clip:rect(0 0 0 0);height:1px;width:1px;margin:-1px;padding:0;border:0"><div class="omapi-shortcode-helper">[class^="wpforms-"]</div><div class="omapi-shortcode-parsed omapi-encoded">[class^=&quot;wpforms-&quot;]</div></div>		<script type="text/javascript">
+		var xl5owlkzozs3frzlukmx_shortcode = true;var jvgplds8m6ohwqx7cbz0_shortcode = true;var mmdaemgz9okgn4k1ultv_shortcode = true;var qqgnghaiokuan9g5u6sf_shortcode = true;		</script>
+		<script type='text/javascript' id='contact-form-7-js-extra'>
+/* <![CDATA[ */
+var wpcf7 = {"apiSettings":{"root":"https:\/\/www.iamcountryside.com\/wp-json\/contact-form-7\/v1","namespace":"contact-form-7\/v1"},"cached":"1"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://cdn.iamcountryside.com/wp-content/plugins/contact-form-7/includes/js/scripts.js?ver=5.3.2' id='contact-form-7-js'></script>
+<script type='text/javascript' id='iacsb_script-js-extra'>
+/* <![CDATA[ */
+var fromphp = {"templateUrl":"https:\/\/www.iamcountryside.com\/wp-content\/plugins\/subscribebutton\/images\/"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://cdn.iamcountryside.com/wp-content/plugins/subscribebutton/js/subscribebutton.js?ver=5.6.6' id='iacsb_script-js'></script>
+<script type='text/javascript' src='https://www.google.com/recaptcha/api.js?render=6LfVotEUAAAAAD6kcWxcTus9d7md6dGXizMbvS03&#038;ver=3.0' id='google-recaptcha-js'></script>
+<script type='text/javascript' id='wpcf7-recaptcha-js-extra'>
+/* <![CDATA[ */
+var wpcf7_recaptcha = {"sitekey":"6LfVotEUAAAAAD6kcWxcTus9d7md6dGXizMbvS03","actions":{"homepage":"homepage","contactform":"contactform"}};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://cdn.iamcountryside.com/wp-content/plugins/contact-form-7/modules/recaptcha/script.js?ver=5.3.2' id='wpcf7-recaptcha-js'></script>
+<script type='text/javascript' id='rocket-browser-checker-js-after'>
+"use strict";var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||!1,descriptor.configurable=!0,"value"in descriptor&&(descriptor.writable=!0),Object.defineProperty(target,descriptor.key,descriptor)}}return function(Constructor,protoProps,staticProps){return protoProps&&defineProperties(Constructor.prototype,protoProps),staticProps&&defineProperties(Constructor,staticProps),Constructor}}();function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor))throw new TypeError("Cannot call a class as a function")}var RocketBrowserCompatibilityChecker=function(){function RocketBrowserCompatibilityChecker(options){_classCallCheck(this,RocketBrowserCompatibilityChecker),this.passiveSupported=!1,this._checkPassiveOption(this),this.options=!!this.passiveSupported&&options}return _createClass(RocketBrowserCompatibilityChecker,[{key:"_checkPassiveOption",value:function(self){try{var options={get passive(){return!(self.passiveSupported=!0)}};window.addEventListener("test",null,options),window.removeEventListener("test",null,options)}catch(err){self.passiveSupported=!1}}},{key:"initRequestIdleCallback",value:function(){!1 in window&&(window.requestIdleCallback=function(cb){var start=Date.now();return setTimeout(function(){cb({didTimeout:!1,timeRemaining:function(){return Math.max(0,50-(Date.now()-start))}})},1)}),!1 in window&&(window.cancelIdleCallback=function(id){return clearTimeout(id)})}},{key:"isDataSaverModeOn",value:function(){return"connection"in navigator&&!0===navigator.connection.saveData}},{key:"supportsLinkPrefetch",value:function(){var elem=document.createElement("link");return elem.relList&&elem.relList.supports&&elem.relList.supports("prefetch")&&window.IntersectionObserver&&"isIntersecting"in IntersectionObserverEntry.prototype}},{key:"isSlowConnection",value:function(){return"connection"in navigator&&"effectiveType"in navigator.connection&&("2g"===navigator.connection.effectiveType||"slow-2g"===navigator.connection.effectiveType)}}]),RocketBrowserCompatibilityChecker}();
+</script>
+<script type='text/javascript' id='rocket-preload-links-js-extra'>
+/* <![CDATA[ */
+var RocketPreloadLinksConfig = {"excludeUris":"\/feed\/|\/web-stories\/|\/(.+\/)?feed\/?.+\/?|\/(?:.+\/)?embed\/|\/(index\\.php\/)?wp\\-json(\/.*|$)|\/wp-admin\/|\/logout\/|\/wp-login.php","usesTrailingSlash":"1","imageExt":"jpg|jpeg|gif|png|tiff|bmp|webp|avif","fileExt":"jpg|jpeg|gif|png|tiff|bmp|webp|avif|php|pdf|html|htm","siteUrl":"https:\/\/www.iamcountryside.com","onHoverDelay":"100","rateThrottle":"3"};
+/* ]]> */
+</script>
+<script type='text/javascript' id='rocket-preload-links-js-after'>
+(function() {
+"use strict";var r="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e},e=function(){function i(e,t){for(var n=0;n<t.length;n++){var i=t[n];i.enumerable=i.enumerable||!1,i.configurable=!0,"value"in i&&(i.writable=!0),Object.defineProperty(e,i.key,i)}}return function(e,t,n){return t&&i(e.prototype,t),n&&i(e,n),e}}();function i(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}var t=function(){function n(e,t){i(this,n),this.browser=e,this.config=t,this.options=this.browser.options,this.prefetched=new Set,this.eventTime=null,this.threshold=1111,this.numOnHover=0}return e(n,[{key:"init",value:function(){!this.browser.supportsLinkPrefetch()||this.browser.isDataSaverModeOn()||this.browser.isSlowConnection()||(this.regex={excludeUris:RegExp(this.config.excludeUris,"i"),images:RegExp(".("+this.config.imageExt+")$","i"),fileExt:RegExp(".("+this.config.fileExt+")$","i")},this._initListeners(this))}},{key:"_initListeners",value:function(e){-1<this.config.onHoverDelay&&document.addEventListener("mouseover",e.listener.bind(e),e.listenerOptions),document.addEventListener("mousedown",e.listener.bind(e),e.listenerOptions),document.addEventListener("touchstart",e.listener.bind(e),e.listenerOptions)}},{key:"listener",value:function(e){var t=e.target.closest("a"),n=this._prepareUrl(t);if(null!==n)switch(e.type){case"mousedown":case"touchstart":this._addPrefetchLink(n);break;case"mouseover":this._earlyPrefetch(t,n,"mouseout")}}},{key:"_earlyPrefetch",value:function(t,e,n){var i=this,r=setTimeout(function(){if(r=null,0===i.numOnHover)setTimeout(function(){return i.numOnHover=0},1e3);else if(i.numOnHover>i.config.rateThrottle)return;i.numOnHover++,i._addPrefetchLink(e)},this.config.onHoverDelay);t.addEventListener(n,function e(){t.removeEventListener(n,e,{passive:!0}),null!==r&&(clearTimeout(r),r=null)},{passive:!0})}},{key:"_addPrefetchLink",value:function(i){return this.prefetched.add(i.href),new Promise(function(e,t){var n=document.createElement("link");n.rel="prefetch",n.href=i.href,n.onload=e,n.onerror=t,document.head.appendChild(n)}).catch(function(){})}},{key:"_prepareUrl",value:function(e){if(null===e||"object"!==(void 0===e?"undefined":r(e))||!1 in e||-1===["http:","https:"].indexOf(e.protocol))return null;var t=e.href.substring(0,this.config.siteUrl.length),n=this._getPathname(e.href,t),i={original:e.href,protocol:e.protocol,origin:t,pathname:n,href:t+n};return this._isLinkOk(i)?i:null}},{key:"_getPathname",value:function(e,t){var n=t?e.substring(this.config.siteUrl.length):e;return n.startsWith("/")||(n="/"+n),this._shouldAddTrailingSlash(n)?n+"/":n}},{key:"_shouldAddTrailingSlash",value:function(e){return this.config.usesTrailingSlash&&!e.endsWith("/")&&!this.regex.fileExt.test(e)}},{key:"_isLinkOk",value:function(e){return null!==e&&"object"===(void 0===e?"undefined":r(e))&&(!this.prefetched.has(e.href)&&e.origin===this.config.siteUrl&&-1===e.href.indexOf("?")&&-1===e.href.indexOf("#")&&!this.regex.excludeUris.test(e.href)&&!this.regex.images.test(e.href))}}],[{key:"run",value:function(){"undefined"!=typeof RocketPreloadLinksConfig&&new n(new RocketBrowserCompatibilityChecker({capture:!0,passive:!0}),RocketPreloadLinksConfig).init()}}]),n}();t.run();
+}());
+</script>
+<script type='text/javascript' src='https://cdn.iamcountryside.com/wp-includes/js/comment-reply.min.js?ver=5.6.6' id='comment-reply-js'></script>
+<script type='text/javascript' src='https://cookie-cdn.cookiepro.com/consent/74c161a9-4179-434e-aafc-b19db8f985e5.js?ver=1.0' id='vendor-cookiepro-js-js'></script>
+<script type='text/javascript' id='vendor-cookiepro-js-js-after'>
+function OptanonWrapper() { }
+</script>
+<script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js' id='opi-jquery-js'></script>
+<script type='text/javascript' src='https://cdn.iamcountryside.com/wp-content/plugins/opi-countryside-extended/modules/js/article_ad.js' id='opi_article_ad-js'></script>
+<script>(function(d){var s=d.createElement("script");s.type="text/javascript";s.src="https://a.omappapi.com/app/js/api.min.js";s.async=true;s.id="omapi-script";d.getElementsByTagName("head")[0].appendChild(s);})(document);</script><script type='text/javascript' src='https://cdn.iamcountryside.com/wp-includes/js/wp-embed.min.js?ver=5.6.6' id='wp-embed-js'></script>
+<script async="async" type='text/javascript' src='https://cdn.iamcountryside.com/wp-content/plugins/akismet/_inc/form.js?ver=4.1.9' id='akismet-form-js'></script>
+<script type='text/javascript' src='https://cdn.iamcountryside.com/wp-content/plugins/optinmonster/assets/js/helper.js?ver=2.6.8' id='optinmonster-wp-helper-js'></script>
+<!-- WhatCounts Tracking - View Content Script -->
+<script type="text/javascript">
+    (function(){
+    analytics.track('Viewed Content', {
+    publishdate: "05/10/2021 07:46:00 PM",
+    author: "Countryside Magazine Contributor",
+    contenttype: "Article",
+    title: "Raising Highland Cattle for Beef",
+    pagecategory: "Cattle"
+    }, {wcapiVersion: '2.0'});
+    })();
+</script>
+<!-- End WhatCounts Tracking - View Content Script -->
+		<script type="text/javascript">var omapi_localized = {
+			ajax: 'https://www.iamcountryside.com/wp-admin/admin-ajax.php?optin-monster-ajax-route=1',
+			nonce: '2c608d3038',
+			slugs: 
+			{"xl5owlkzozs3frzlukmx":{"slug":"xl5owlkzozs3frzlukmx","mailpoet":false},"jvgplds8m6ohwqx7cbz0":{"slug":"jvgplds8m6ohwqx7cbz0","mailpoet":false},"mmdaemgz9okgn4k1ultv":{"slug":"mmdaemgz9okgn4k1ultv","mailpoet":false},"qqgnghaiokuan9g5u6sf":{"slug":"qqgnghaiokuan9g5u6sf","mailpoet":false}}		};</script>
+				<script type="text/javascript">var omapi_data = {"wc_cart":[],"object_id":4807,"object_key":"post","object_type":"post","term_ids":[26,479,812,482]};</script>
+		<script>window.lazyLoadOptions={elements_selector:"img[data-lazy-src],.rocket-lazyload,iframe[data-lazy-src]",data_src:"lazy-src",data_srcset:"lazy-srcset",data_sizes:"lazy-sizes",class_loading:"lazyloading",class_loaded:"lazyloaded",threshold:300,callback_loaded:function(element){if(element.tagName==="IFRAME"&&element.dataset.rocketLazyload=="fitvidscompatible"){if(element.classList.contains("lazyloaded")){if(typeof window.jQuery!="undefined"){if(jQuery.fn.fitVids){jQuery(element).parent().fitVids()}}}}}};window.addEventListener('LazyLoad::Initialized',function(e){var lazyLoadInstance=e.detail.instance;if(window.MutationObserver){var observer=new MutationObserver(function(mutations){var image_count=0;var iframe_count=0;var rocketlazy_count=0;mutations.forEach(function(mutation){for(i=0;i<mutation.addedNodes.length;i++){if(typeof mutation.addedNodes[i].getElementsByTagName!=='function'){continue}
+if(typeof mutation.addedNodes[i].getElementsByClassName!=='function'){continue}
+images=mutation.addedNodes[i].getElementsByTagName('img');is_image=mutation.addedNodes[i].tagName=="IMG";iframes=mutation.addedNodes[i].getElementsByTagName('iframe');is_iframe=mutation.addedNodes[i].tagName=="IFRAME";rocket_lazy=mutation.addedNodes[i].getElementsByClassName('rocket-lazyload');image_count+=images.length;iframe_count+=iframes.length;rocketlazy_count+=rocket_lazy.length;if(is_image){image_count+=1}
+if(is_iframe){iframe_count+=1}}});if(image_count>0||iframe_count>0||rocketlazy_count>0){lazyLoadInstance.update()}});var b=document.getElementsByTagName("body")[0];var config={childList:!0,subtree:!0};observer.observe(b,config)}},!1)</script><script data-no-minify="1" async src="https://cdn.iamcountryside.com/wp-content/plugins/wp-rocket/assets/js/lazyload/16.1/lazyload.min.js"></script><script>function lazyLoadThumb(e){var t='<img loading="lazy" data-lazy-src="https://i.ytimg.com/vi/ID/hqdefault.jpg" alt="" width="480" height="360"><noscript><img src="https://i.ytimg.com/vi/ID/hqdefault.jpg" alt="" width="480" height="360"></noscript>',a='<div class="play"></div>';return t.replace("ID",e)+a}function lazyLoadYoutubeIframe(){var e=document.createElement("iframe"),t="ID?autoplay=1";t+=0===this.dataset.query.length?'':'&'+this.dataset.query;e.setAttribute("src",t.replace("ID",this.dataset.src)),e.setAttribute("frameborder","0"),e.setAttribute("allowfullscreen","1"),e.setAttribute("allow", "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"),this.parentNode.replaceChild(e,this)}document.addEventListener("DOMContentLoaded",function(){var e,t,a=document.getElementsByClassName("rll-youtube-player");for(t=0;t<a.length;t++)e=document.createElement("div"),e.setAttribute("data-id",a[t].dataset.id),e.setAttribute("data-query", a[t].dataset.query),e.setAttribute("data-src", a[t].dataset.src),e.innerHTML=lazyLoadThumb(a[t].dataset.id),e.onclick=lazyLoadYoutubeIframe,a[t].appendChild(e)});</script><script src="https://cdn.iamcountryside.com/wp-content/themes/CountrySide/js/script.js"></script>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"NRJS-238f1c6cd19561447a3","applicationID":"424093655","transactionName":"NAdUMRFWXktRAE0LCQ1NdwYXXl9WHxBQDAEPBw==","queueTime":0,"applicationTime":1048,"atts":"GEBXR1lMTUU=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+
+</html>
+<!-- This website is like a Rocket, isn't it? Performance optimized by WP Rocket. Learn more: https://wp-rocket.me -->
